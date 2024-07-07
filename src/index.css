@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+.font-days {
+    font-family: 'Days One', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif; 
+}
+
+@layer utilities {
+    .bg-hero-background {
+        background-image: url('./media/hero.svg'); /* Ensure the path is correct */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.svg-container svg {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+/* embla.css */
+.embla {
+    overflow: hidden;
+    padding: 1rem 0 ;
+  }
+  
+  .embla__container {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .embla__slide {
+    min-width: 25%; /* 100% divided by the number of slides to show */
+    padding: 0.5rem 0;
+  }
+  
+  .embla__button {
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .embla__button[disabled] {
+    cursor: not-allowed;
+  }
+  
+  .embla__button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+/* Sectionsubtitle */
+:root {
+  --underline-color-light: #124C5F;
+  --underline-color-dark: #FFEE94; 
+}
+
+.dark {
+  --underline-color: var(--underline-color-dark);
+}
+
+.light {
+  --underline-color: var(--underline-color-light);
+}
+  
