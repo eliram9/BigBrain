@@ -18,9 +18,9 @@ const ArticlesList = ({ onClose }) => (
                     </div>
                     <div>
                         <a href={article.link} target="_blank" rel="noopener noreferrer">
-                            <h4 className="font-semibold hover:underline">{article.title}</h4>
+                            <h4 className="font-semibold hover:underline sm:text-md">{article.title}</h4>
                         </a>
-                        <p className='mt-1 text-md'>Author: {article.author}</p>
+                        <p className='mt-1 text-md sm:text-sm'>{article.author}</p>
                     </div>
                 </li>
             ))}
