@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import PageContainer from '../ui-elements/PageContainer'
-import Ari from '../../media/Ari.svg'
+import PageContainer from '../ui-elements/PageContainer';
+import Ari from '../../media/Ari.svg';
 
 import { Conversation, Payment } from '../../media/icons';
 import QuoteBox from '../ui-elements/QuoteBox';
@@ -34,23 +34,20 @@ const About = () => {
 
             <section className='dark:bg-black pt-10'>
                 <PageContainer className='text-darkGray flex justify-end w-full text-left leading-relaxed font-light
-                                         lg:text-md xl:text-md 2xl:text-base 3xl:text-xl dark:text-white dark:font-light'>
+                                         md:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl dark:text-white dark:font-light'>
                     <p>I offer individual psychotherapy to teenagers and adults of all ages and stages. I have been partnering with individuals for 12 years, navigating the challenges, celebrating the victories, 
                        and working towards the life each person hopes for themselves.
                     </p>
                     <br /> 
                     <p>With specialized training in Eye Movement Desensitization and Reprocessing (EMDR), I bring a wealth of experience and a range of therapeutic tools to our sessions, but it's the connection 
-                        between us that truly fosters healing and growth. My own experiences with mental healthhave taught me resilience, compassion, and the profound strength of the human spirit and I want to share that with you.
-                    <p /> 
-                     
-                    </p> 
-                    <p>My own
-                       health experience has taught me resilience, compassion, and the profound strength of the human spirit.
+                        between us that truly fosters healing and growth. My own experiences with mental health have taught me resilience, compassion, and the profound strength of the human spirit and I want to share that with you.
                     </p>
+                    <p>My own health experience has taught me resilience, compassion, and the profound strength of the human spirit.</p>
+
                     <br /> 
-                       I offer you a space of non-judgment, empathy, and authentic connection. 
-                    <p>
-                        If you’re seeking a therapist who believes in the power of the mind, who listens deeply, and who is committed to seeing you thrive, I invite you to reach out. 
+
+                    <p> I offer you a space of non-judgment, empathy, and authentic connection. </p>  
+                    <p>If you’re seeking a therapist who believes in the power of the mind, who listens deeply, and who is committed to seeing you thrive, I invite you to reach out. 
                        This can be the start of healing for your past, present and future.  All services are being provided currently via telehealth.
                     </p>
                 </PageContainer>
@@ -83,16 +80,14 @@ const About = () => {
                                         md:w-full md:pl-0 lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
                             <div className='text-left dark:text-white leading-relaxed font-light sm:text-sm'>
                                 <p className='leading-relaxed'>You can count on a supportive, and secure environment for healing, accessible from the comfort of your home.</p> 
-                                <p>Sessions are conducted via a secure video conferencing platform, ensuring privacy and convenience. 
-                                </p>
+                                <p>Sessions are conducted via a secure video conferencing platform, ensuring privacy and convenience.</p>
+
                                 <br />
+
                                 <p>I will guide you through the EMDR process, 
                                     using virtual tools for bilateral stimulation, such as a ball that crosses back and forth across the screen. 
                                 </p>
                                 <p>You will receive personalized support as you walk through your journey of healing.</p>
-                               
-                                
-                                
                             </div>
                         </div>
                     </div>
@@ -108,8 +103,10 @@ const About = () => {
                             <div className='w-7/12 flex items-start text-darkGray pr-10 md:w-full'>
                                 <div className='sm:text-center text-left dark:text-white leading-relaxed font-light'>
                                     <div className='sm:text-left text-left dark:text-white leading-relaxed sm:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
-                                        <p className='font-medium'>The charge per 53 minute session is $170. All credit cards are accepted and a 3% charge is applied. </p>
+                                        <p className='font-medium'>The charge per 53 minute session is $170. All credit cards are accepted and a 3% charge is applied.</p>
+
                                         <br />
+
                                         <p>Please note that I am not part of any insurance panels and am therefore considered an
                                             “out-of-network provider.” If you wish to be reimbursed by your insurance carrier, please contact your insurance provider to determine benefits you may have. 
                                         </p>
