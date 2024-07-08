@@ -42,7 +42,6 @@ const About = () => {
                     <p>With specialized training in Eye Movement Desensitization and Reprocessing (EMDR), I bring a wealth of experience and a range of therapeutic tools to our sessions, but it's the connection 
                         between us that truly fosters healing and growth. My own experiences with mental health have taught me resilience, compassion, and the profound strength of the human spirit and I want to share that with you.
                     </p>
-                    <p>My own health experience has taught me resilience, compassion, and the profound strength of the human spirit.</p>
 
                     <br /> 
 
@@ -103,7 +102,7 @@ const About = () => {
                             <div className='w-7/12 flex items-start text-darkGray pr-10 md:w-full'>
                                 <div className='sm:text-center text-left dark:text-white leading-relaxed font-light'>
                                     <div className='sm:text-left text-left dark:text-white leading-relaxed sm:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
-                                        <p className='font-medium'>The charge per 53 minute session is $170. All credit cards are accepted and a 3% charge is applied.</p>
+                                        <p className='font-medium'>The charge per 50 minute session is $170. All credit cards are accepted and a 3% charge is applied.</p>
 
                                         <br />
 
