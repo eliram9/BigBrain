@@ -42,7 +42,6 @@ const About = () => {
                     <p>With specialized training in Eye Movement Desensitization and Reprocessing (EMDR), I bring a wealth of experience and a range of therapeutic tools to our sessions, but it's the connection 
                         between us that truly fosters healing and growth. My own experiences with mental health have taught me resilience, compassion, and the profound strength of the human spirit and I want to share that with you.
                     </p>
-                    <p>My own health experience has taught me resilience, compassion, and the profound strength of the human spirit.</p>
 
                     <br /> 
 
