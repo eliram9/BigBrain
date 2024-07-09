@@ -30,7 +30,7 @@ const GoUpButton = () => {
     return (
         showButton && (
         <button onClick={scrollToTop}
-                className="fixed bottom-4 right-4 bg-main text-white p-2 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none"
+                className="fixed bottom-4 right-8 bg-main text-white p-[6px] rounded-full shadow-lg hover:bg-blue-700 focus:outline-none"
         >
             <GoUp />
         </button>
