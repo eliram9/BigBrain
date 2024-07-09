@@ -8,6 +8,7 @@ import Resources from './components/pages/Resources.jsx';
 import Contact from './components/pages/Contact';
 import EMDR from './components/pages/EMDR';
 import Schedule from './components/pages/Schedule';
+import GoUpButton from './components/ui-elements/GoUpButton';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/contact-us" element={<Contact />} />
                 <Route path="/schedule" element={<Schedule />} />
             </Routes>
+            <GoUpButton />
         </div>
     );
 }

@@ -1332,7 +1332,7 @@ export const DownArrow = ({ className = '', stroke = '#000', ...rest }) => (
   </svg>
 );
 
-export const UpArrow = ({ className = '', stroke = '#000', ...rest }) => (
+export const UpArrow = ({ className = '', stroke = '#FFEE94', ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -1342,14 +1342,25 @@ export const UpArrow = ({ className = '', stroke = '#000', ...rest }) => (
     className={className}
     {...rest}
   >
-    <path
-      // stroke={stroke}
-      // strokeLinecap="round"
-      // strokeLinejoin="round"
-      // strokeWidth="1.5"
-      // d="M10 7l5 5-5 5"'
-      
+    <path   
       fill="#0F0F0F"
+      d="M18.293 15.29a1 1 0 000-1.415L13.4 8.988a2 2 0 00-2.828 0l-4.89 4.89a1 1 0 101.414 1.415l4.185-4.186a1 1 0 011.415 0l4.182 4.182a1 1 0 001.414 0z"
+    ></path>
+  </svg>
+);
+
+export const GoUp = ({ className = '', ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+    className={className}
+    {...rest}
+  >
+    <path   
+      fill="white"
       d="M18.293 15.29a1 1 0 000-1.415L13.4 8.988a2 2 0 00-2.828 0l-4.89 4.89a1 1 0 101.414 1.415l4.185-4.186a1 1 0 011.415 0l4.182 4.182a1 1 0 001.414 0z"
     ></path>
   </svg>
