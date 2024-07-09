@@ -27,7 +27,7 @@ const Hero = () => {
                         <h1 className='text-5xl font-semibold
                                        sm:text-4xl md:text-3xl lg:text-4xl' 
                         >
-                            EMDR as Your Mind's Gym
+                            EMDR is Your Mind's Gym
                         </h1>
                         <div className='pt-3 font-light 
                                         md:text-md lg:text-base'
