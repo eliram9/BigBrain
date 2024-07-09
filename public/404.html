@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="refresh" content="0; url=/" />
+        <script>
+            // This script will redirect any 404 requests to the index.html page
+            (function () {
+            var path = window.location.pathname;
+            if (path !== "/") {
+                window.location.replace("/");
+            }
+            })();
+        </script>
+    </head>
+    <body>
+        <p>Redirecting...</p>
+    </body>
+</html>
