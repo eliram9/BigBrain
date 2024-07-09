@@ -102,7 +102,9 @@ const About = () => {
                             <div className='w-7/12 flex items-start text-darkGray pr-10 md:w-full'>
                                 <div className='sm:text-center text-left dark:text-white leading-relaxed font-light'>
                                     <div className='sm:text-left text-left dark:text-white leading-relaxed sm:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
-                                        <p className='font-medium'>The charge per 50 minute session is $170. All credit cards are accepted and a 3% charge is applied.</p>
+                                        <p className='font-medium'>The sessions are 50 minutes long. All major credit cards, Zelle, and Venmo are accepted for payment, with a 3% charge for 
+                                                                   credit card transactions.
+                                        </p>
 
                                         <br />
 
