@@ -4,7 +4,7 @@ import { Logo, LightModeIcon, DarkModeIcon } from '../media/icons'
 import useThemeSwitcher from './hooks/useThemeSwitcher';
 
 const CustomLink = ({ href, title, className = "" }) => {
-    let location = useLocation()
+    let location = useLocation();
     return (
         <Link to={href} className={`${className} relative group dark:text-white`}>
             {title}
@@ -18,10 +18,10 @@ const CustomLink = ({ href, title, className = "" }) => {
     );
 }
 
-const MobileCustomLink = ({ href, title, className = "" }) => {
-    let location = useLocation()
+const MobileCustomLink = ({ href, title, className = "", onClick }) => {
+    let location = useLocation();
     return (
-        <Link to={href} className={`${className} relative group`}>
+        <Link to={href} className={`${className} relative group`} onClick={onClick}>
             {title}
             <span className={`absolute h-[1px] inline-block bg-white dark:bg-black left-0 -bottom-0.5
                             group-hover:w-full transition-[width] ease duration-800
@@ -37,6 +37,7 @@ const Navbar = () => {
     const [theme, toggleTheme] = useThemeSwitcher();
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null); 
+    let location = useLocation();
 
     const handleClick = () => {
         setIsOpen(!isOpen);
@@ -59,6 +60,11 @@ const Navbar = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [isOpen]);
+
+    // Close the menu when the route changes
+    useEffect(() => {
+        setIsOpen(false);
+    }, [location]);
 
     return (
         <header className='w-full px-32 py-5 flex items-center justify-between dark:black relative poppins md:px-4 lg:px-8 xl:px-12 dark:bg-black'>
@@ -97,30 +103,35 @@ const Navbar = () => {
                                     <MobileCustomLink href="/" 
                                                       title="Home Page" 
                                                       className="text-white dark:text-black dark:font-normal text-md font-extralight block w-3/5" 
+                                                      onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/about" 
                                                       title="About" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/emdr" 
                                                       title="EMDR" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/resources" 
                                                       title="Resources" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/contact-us" 
                                                       title="Contact" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      onClick={handleClick} 
                                     />
                                 </div>
                             </div>
