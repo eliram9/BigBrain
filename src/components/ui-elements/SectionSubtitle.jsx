@@ -26,7 +26,7 @@ const SectionSubtitle = ({ subtitle, className }) => {
 
     return (
         <div className={`flex flex-col ${className}`}>
-            <h2 className="text-3xl font-semibold text-black relative dark:text-white sm:text-2xl">
+            <h2 className="text-3xl font-semibold text-black relative dark:text-white sm:text-xl">
                 {subtitle}
             </h2>
             <div 
