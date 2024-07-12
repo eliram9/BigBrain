@@ -6,7 +6,7 @@ import SectionSubtitle from './SectionSubtitle';
 const HelpYou = () => {
     return (
         <>
-            <section className='poppins sm:mb-16 '>
+            <section className='poppins sm:mb-16 sm:mt-0 xl:mt-16 2xl:mt-12'>
                 <div className='flex flex-row items-center 
                                 sm:flex-col'
                 >
