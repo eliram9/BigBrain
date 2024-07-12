@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
 import { BrowserRouter as Router } from 'react-router-dom';
 import { initGA, logPageView } from './analytics';
-import { useEffect } from 'react';
 
 const AppWrapper = () => {
     useEffect(() => {
