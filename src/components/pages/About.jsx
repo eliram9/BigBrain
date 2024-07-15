@@ -7,6 +7,7 @@ import { Conversation, Payment } from '../../media/icons';
 import QuoteBox from '../ui-elements/QuoteBox';
 import SectionSubtitle from '../ui-elements/SectionSubtitle';
 import FooterNew from '../FooterNew';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -95,31 +96,32 @@ const About = () => {
 
             <section>
                 <PageContainer className='text-darkGray pb-40 md:pb-20 bg-gradient-to-b from-white to-cream dark:bg-gradient-to-b dark:from-black dark:to-black'>
-                        <SectionSubtitle subtitle="Payment and Scheduling" className="items-center mb-20 sm:mb-4" />
+                        <SectionSubtitle subtitle="Booking & Consultations" className="items-center mb-20 sm:mb-4" />
                         <div className='flex md:flex-col-reverse  items-center justify-between'>
 
                             {/* Text Container */}
                             <div className='w-7/12 flex items-start text-darkGray pr-10 md:w-full'>
                                 <div className='sm:text-center text-left dark:text-white leading-relaxed font-light'>
                                     <div className='sm:text-left text-left dark:text-white leading-relaxed sm:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
-                                        <p className='font-medium'>The sessions are 50 minutes long. All major credit cards, Zelle, and Venmo are accepted for payment, with a 3% charge for 
-                                                                   credit card transactions.
-                                        </p>
+                                        <p >Our first step will be to book a consultation. To do so, please contact us
+                                            <Link to="/conact-us" className='underline text-main hover:text-white hover:bg-main ml-1'>here</Link>, call 301-337-5676, or visit our online booking system (coming soon).</p>
 
                                         <br />
 
-                                        <p>Please note that I am not part of any insurance panels and am therefore considered an
-                                            “out-of-network provider.” If you wish to be reimbursed by your insurance carrier, please contact your insurance provider to determine benefits you may have. 
-                                        </p>
-                                        <ul>
-                                            <li><span className='font-medium'>(1)</span> the type and amount of mental health coverage available to you</li>
-                                            <li><span className='font-medium'>(2)</span> the coverage for out of network providers</li>
-                                            <li><span className='font-medium'>(3)</span> if there is an annual deductible you must meet</li>
-                                            <li><span className='font-medium'>(4)</span> and if a note from your physician is required indicating your need for therapy</li>
-                                        </ul>
+                                        <p>During your initial consultation, we will discuss your goals and what tools the therapists can employ to best support you.</p>
+                                    
                                         <br />
-                                        <p><span className='font-medium'>I offer daytime telehealth services from 9 AM to 3PM Monday through Friday. </span>
-                                           I would love to see if we are a good match. Please reach out to schedule a free 15 minute consultation with me.  
+
+                                        <p>We offer flexible scheduling options with appointments through telehealth services ranging from 9 AM to 3 PM, Monday through Friday. 
+                                           Evening appointments are available upon request.
+                                        </p>
+                                        <p>Each session lasts 50 minutes.</p>
+
+                                        <br />
+
+                                        <p>Please be advised that appointments must be cancelled at least 48 hours prior to your scheduled appointment or they will incur a cancellation fee of one session.
+                                           I would love to see if we are a good match. 
+                                           Please reach out to schedule a free 15-minute consultation with me today!
                                         </p>
                                     </div>
                                 </div>
