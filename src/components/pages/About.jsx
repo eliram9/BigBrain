@@ -104,7 +104,7 @@ const About = () => {
                                 <div className='sm:text-center text-left dark:text-white leading-relaxed font-light'>
                                     <div className='sm:text-left text-left dark:text-white leading-relaxed sm:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
                                         <p >Our first step will be to book a consultation. To do so, please contact us
-                                            <Link to="/conact-us" className='underline text-main hover:text-white hover:bg-main ml-1'>here</Link>, call 301-337-5676, or visit our online booking system (coming soon).</p>
+                                            <Link to="/contact-us" className='underline text-main hover:text-white hover:bg-main ml-1'>here</Link>, call 301-337-5676, or visit our online booking system (coming soon).</p>
 
                                         <br />
 
