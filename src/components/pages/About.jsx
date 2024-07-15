@@ -103,8 +103,13 @@ const About = () => {
                             <div className='w-7/12 flex items-start text-darkGray pr-10 md:w-full'>
                                 <div className='sm:text-center text-left dark:text-white leading-relaxed font-light'>
                                     <div className='sm:text-left text-left dark:text-white leading-relaxed sm:text-sm lg:text-md xl:text-md 2xl:text-base 3xl:text-xl'>
-                                        <p >Our first step will be to book a consultation. To do so, please contact us
-                                            <Link to="/contact-us" className='underline text-main hover:text-white hover:bg-main ml-1'>here</Link>, call 301-337-5676, or visit our online booking system (coming soon).</p>
+                                        <p >Our first step will be to book a free 15 minute consultation. To do so, please contact us
+                                            <Link to="/contact-us" 
+                                                  className='underline text-main hover:text-white hover:bg-main ml-1'
+                                                  onClick={() => window.scrollTo(0, 0)}
+                                            >
+                                                    here
+                                            </Link>, call 301-337-5676, or visit our online booking system (coming soon).</p>
 
                                         <br />
 
@@ -120,7 +125,8 @@ const About = () => {
                                         <br />
 
                                         <p>Please be advised that appointments must be cancelled at least 48 hours prior to your scheduled appointment or they will incur a cancellation fee of one session.
-                                           I would love to see if we are a good match. 
+                                        </p>
+                                        <p>I would love to see if we are a good match. 
                                            Please reach out to schedule a free 15-minute consultation with me today!
                                         </p>
                                     </div>
