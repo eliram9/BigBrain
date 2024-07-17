@@ -47,7 +47,7 @@ const EMDR = () => {
                                 </p>
                                 <br />
                                 <p>EMDR can be utilized with these unsettled concerns, aiding the brain's 
-                                    natural healing process by effectively processing and organizing these unresolved memories. Once the source of distress has eben alleviated, our behaviors 
+                                    natural healing process by effectively processing and organizing these unresolved memories. Once the source of distress has been alleviated, our behaviors 
                                     decrease in reactivity for current and future stressors and we are able to live healthier, happier lives. 
                                 </p>
                             </div>
