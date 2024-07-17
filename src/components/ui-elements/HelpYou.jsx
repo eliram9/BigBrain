@@ -35,8 +35,8 @@ const HelpYou = () => {
                            else and I'm here to help you reclaim peace and balance in your life. 
                         </p>
                         <br />
-                        <p>I speicalize in treating ADHD, anxiety, depression, and trauma.</p>
-                        <p>I also offer support for stress management, relationship issues, self-esteem, life transitions, Alzheimer's, social anxiety, chronic pain, chronic pain, attachment trauma, medical trauma, stress related issues, and career/school counseling. 
+                        <p>I specialize in treating ADHD, anxiety, depression, and trauma.</p>
+                        <p>I also offer support for stress management, relationship issues, self-esteem, life transitions, Alzheimer's, social anxiety, chronic pain, women's issues, attachment trauma, medical trauma, stress related issues, and career/school counseling. 
                         </p>
                     </div>
                 </div>

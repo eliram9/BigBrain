@@ -21,7 +21,7 @@ const Contact = () => {
                             }}
                         />
                 <PageContainer className='relative z-10 text-darkGray pt-10'>
-                <SectionSubtitle subtitle="Contact US" className="mb-20 sm:mb-4 md:mb-10 flex justify-center items-center" />
+                <SectionSubtitle subtitle="Contact Us" className="mb-20 sm:mb-4 md:mb-10 flex justify-center items-center" />
                     
                     <div className="relative pb-12 sm:pb-0"> 
                         {/* Content */}
