@@ -20,7 +20,7 @@ const About = () => {
                                         sm:w-full'>
                             <div className='sm:text-center text-left dark:text-white'>
                                 <h1 className='text-4xl font-semibold mb-8'>Hi, I'm Arianne</h1>
-                                <h4 className='leading-relaxed text-2xl xl:text-xl'>I’m glad that we’ve found each other. I am a licensed certified social worker – clinical in Maryland, Virginia, and Arizona.</h4>
+                                <h4 className='leading-relaxed text-2xl xl:text-xl'>I’m glad that we’ve found each other. I am a licensed certified social worker – clinical in Maryland, Virginia, Arizona and Nebraska.</h4>
                             </div>
                         </div>
                         
