@@ -43,7 +43,7 @@ const Resources = () => {
 
   return (
     <>
-      <section className='pt-10 bg-gradient-to-b from-white to-cream dark:bg-gradient-to-b dark:from-black dark:to-black poppins'>
+      <section className='bg-gradient-to-b from-white to-cream dark:bg-gradient-to-b dark:from-black dark:to-black poppins'>
         <PageContainer className='text-darkGray dark:bg-black pb-32 '>
           <SectionSubtitle subtitle="Resources" className="sm:my-10 pb-10 sm:pb-0" />
           <div className='flex md:flex-col flex-row items-center justify-between'>
