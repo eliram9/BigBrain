@@ -1,11 +1,13 @@
 import React from 'react';
 import Faces from '../../media/faces.jpg';
 import Kolk from '../../media/kolk.jpg';
+import EveryMemory from '../../media/em.jpg'
 
 
 const books = [
     { title: 'It Didn’t Start with You', author: 'Mark Wolynn', image: Faces, link: "https://markwolynn.com/it-didnt-start-with-you/" },
     { title: 'The Body Keeps The Score', author: 'Bessel van der Kolk', image: Kolk, link: "https://www.besselvanderkolk.com/" },
+    { title: 'Every Memory Deserves Respect', author: 'Deborah Korn, Michael Baldwin, Michael Baldwin', image: EveryMemory, link: "https://www.everymemorydeservesrespect.com/"}
 ];
 
 const BooksList = ({ onClose }) => (
@@ -14,14 +16,14 @@ const BooksList = ({ onClose }) => (
         <ul className="text-gray-700 dark:text-gray-300 grid gap-4 md:grid-cols-1 xl:grid-cols-2 grid-cols-3">
             {books.map((book, index) => (
                 <li key={index} className="mb-2 flex items-top bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-                    <div className="mr-4 mb-2">
-                        <img src={book.image} alt={book.title} className="w-16 object-cover rounded-lg" />
+                    <div className="flex-shrink-0 mr-4 mb-2">
+                        <img src={book.image} alt={book.title} className="w-16 h-20 object-cover rounded-lg" />
                     </div>
-                    <div>
+                    <div className="overflow-hidden">
                         <a href={book.link} target="_blank" rel="noopener noreferrer">
                             <h4 className="font-semibold hover:underline sm:text-md">{book.title}</h4>
                         </a>
-                        <p className='mt-1 text-md sm:text-sm'>{book.author}</p>
+                        <p className='mt-1 text-md sm:text-sm truncate'>{book.author}</p>
                     </div>
                 </li>
             ))}

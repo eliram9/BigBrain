@@ -1,10 +1,13 @@
 import React from 'react';
+
 import TherapyChat from '../../media/therapyChat.png';
 import NoticeThat from '../../media/noticeThat.jpeg';
+import TherapistUncensored from '../../media/tu.webp'
 
 const podcasts = [
     { title: 'It Didn’t Start with You', host: 'Laura Reagan', image: TherapyChat, link: "https://podcasts.apple.com/us/podcast/therapy-chat/id1031099411" },
     { title: 'Notice That', host: 'Jen Savage, Melissa Benintendi, and Bridger Falkenstien', image: NoticeThat, link: "https://podcasts.apple.com/us/podcast/notice-that/id1462605147https://www.besselvanderkolk.com/" },
+    { title: 'Therapist Uncensored Podcast', host: 'Sue Marriott LCSW, CGP & Ann Kelley PhD', image: TherapistUncensored, link: "https://podcasts.apple.com/us/podcast/therapist-uncensored-podcast/id1146941306" }
 ];
 
 const PodcastList = ({ onClose }) => (
