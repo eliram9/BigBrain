@@ -43,63 +43,62 @@ const Resources = () => {
 
   return (
     <>
-      <section className='bg-gradient-to-b from-white to-cream dark:bg-gradient-to-b dark:from-black dark:to-black poppins'>
-        <PageContainer className='text-darkGray dark:bg-black pb-32 '>
-          <SectionSubtitle subtitle="Resources" className="sm:my-10 pb-10 sm:pb-0" />
-          <div className='flex md:flex-col flex-row items-center justify-between'>
-            {/* Image Container */}
-            <div className='w-3/6 flex justify-center
-                                        md:justify-center sm:w-10/12 md:w-8/12 sm:py-5 md:pb-5'>
-                            <ResourcesImage className='h-auto' />
-                        </div>
-            {/* Text Container */}
-            <div className='w-4/6 flex items-center sm:w-full sm:pl-0'>
-              <div className="w-full dark:bg-black">
-                <div className="grid grid-cols-2 md:grid-cols-2 gap-6 ">
-                  <Card 
-                    icon={<Books className="w-12 h-12" />} 
-                    title="Books" 
-                    buttonText="Learn More" 
-                    onButtonClick={() => handleButtonClick('Books')}
-                    isSelected={selectedCard === 'Books'}
-                  />
-                  <Card 
-                    icon={<Podcast className="w-12 h-12" />} 
-                    title="Podcasts" 
-                    buttonText="Listen Now" 
-                    onButtonClick={() => handleButtonClick('Podcasts')}
-                    isSelected={selectedCard === 'Podcasts'}
-                  />
-                  <Card 
-                    icon={<Video className="w-12 h-12" />} 
-                    title="Videos" 
-                    buttonText="Watch Now" 
-                    onButtonClick={() => handleButtonClick('Videos')}
-                    isSelected={selectedCard === 'Videos'}
-                  />
-                  <Card 
-                    icon={<Article className="w-12 h-12" />} 
-                    title="Articles" 
-                    buttonText="Read More" 
-                    onButtonClick={() => handleButtonClick('Articles')}
-                    isSelected={selectedCard === 'Articles'}
-                  />
+        <section className='relative w-full h-auto overflow-hidden'>
+            <PageContainer className='relative z-10 text-darkGray dark:bg-black pb-32 sm:pb-12 md:pb-16 pt-10'>
+            <SectionSubtitle subtitle="Resources" className="mb-20 sm:mb-4" />
+            <div className='flex md:flex-col flex-row items-center justify-between'>
+                {/* Image Container */}
+                <div className='w-3/6 flex justify-center
+                                md:justify-center sm:w-10/12 md:w-8/12 sm:py-5 md:pb-5'>
+                    <ResourcesImage className='h-auto' />
                 </div>
-              </div>
+                {/* Text Container */}
+                <div className='w-4/6 flex items-center sm:w-full sm:pl-0'>
+                    <div className="w-full dark:bg-black">
+                        <div className="grid grid-cols-2 md:grid-cols-2 gap-6 ">
+                        <Card 
+                            icon={<Books className="w-12 h-12" />} 
+                            title="Books" 
+                            buttonText="Learn More" 
+                            onButtonClick={() => handleButtonClick('Books')}
+                            isSelected={selectedCard === 'Books'}
+                        />
+                        <Card 
+                            icon={<Podcast className="w-12 h-12" />} 
+                            title="Podcasts" 
+                            buttonText="Listen Now" 
+                            onButtonClick={() => handleButtonClick('Podcasts')}
+                            isSelected={selectedCard === 'Podcasts'}
+                        />
+                        <Card 
+                            icon={<Video className="w-12 h-12" />} 
+                            title="Videos" 
+                            buttonText="Watch Now" 
+                            onButtonClick={() => handleButtonClick('Videos')}
+                            isSelected={selectedCard === 'Videos'}
+                        />
+                        <Card 
+                            icon={<Article className="w-12 h-12" />} 
+                            title="Articles" 
+                            buttonText="Read More" 
+                            onButtonClick={() => handleButtonClick('Articles')}
+                            isSelected={selectedCard === 'Articles'}
+                        />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
             {selectedCard === 'Books' && (<BooksList onClose={handleClose} />)}
             {selectedCard === 'Podcasts' && (<PodcastList onClose={handleClose} />)}
             {selectedCard === 'Articles' && (<ArticlesList onClose={handleClose} />)}
             {selectedCard === 'Videos' && (<VideosList onClose={handleClose} />)}
 
-        
         </PageContainer>
-      </section>
-      <FooterNew />
+        </section>
+        <FooterNew />
     </>
-  );
+    );
 };
 
 export default Resources;
