@@ -21,7 +21,7 @@ const PodcastList = ({ onClose }) => (
                     </div>
                     <div className="overflow-hidden">
                         <a href={podcast.link} target="_blank" rel="noopener noreferrer">
-                            <h4 className="font-semibold hover:underline sm:text-md">{podcast.title}</h4>
+                            <h4 className="font-semibold hover:underline sm:text-md xs:text-sm">{podcast.title}</h4>
                         </a>
                         <p className='mt-1 text-md sm:text-sm truncate'>{podcast.host}</p>
                     </div>

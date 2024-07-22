@@ -21,7 +21,7 @@ const BooksList = ({ onClose }) => (
                     </div>
                     <div className="overflow-hidden">
                         <a href={book.link} target="_blank" rel="noopener noreferrer">
-                            <h4 className="font-semibold hover:underline sm:text-md">{book.title}</h4>
+                            <h4 className="font-semibold hover:underline sm:text-md xs:text-sm">{book.title}</h4>
                         </a>
                         <p className='mt-1 text-md sm:text-sm truncate'>{book.author}</p>
                     </div>
