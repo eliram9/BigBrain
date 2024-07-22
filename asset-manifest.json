@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.19d6cff2.css",
-    "main.js": "/static/js/main.463c7968.js",
+    "main.js": "/static/js/main.e61d202d.js",
     "static/media/Ari.svg": "/static/media/Ari.ce7568c36846210d18ff41fa2f12bf98.svg",
     "static/media/therapyChat.png": "/static/media/therapyChat.267d60eb3597185c47d5.png",
     "static/media/faces.jpg": "/static/media/faces.842818bf54bb2a5718d0.jpg",
@@ -14,15 +14,16 @@
     "static/media/noticeThat.jpeg": "/static/media/noticeThat.58ece233dca0df4a33ea.jpeg",
     "static/media/woman1.jpg": "/static/media/woman1.1bff995382eeac77325b.jpg",
     "static/media/woman3.jpg": "/static/media/woman3.d24cbec13a58c9ab58b1.jpg",
+    "static/media/apa.webp": "/static/media/apa.dca71f71eba5db718180.webp",
     "static/media/tu.webp": "/static/media/tu.f61c46400a2ff3fa189e.webp",
     "static/media/Base.svg": "/static/media/Base.0c588a5a8d0c6efa0a3f5f2f0d650f5b.svg",
     "index.html": "/index.html",
     "static/media/hero.svg": "/static/media/hero.942454f632140e382964.svg",
     "main.19d6cff2.css.map": "/static/css/main.19d6cff2.css.map",
-    "main.463c7968.js.map": "/static/js/main.463c7968.js.map"
+    "main.e61d202d.js.map": "/static/js/main.e61d202d.js.map"
   },
   "entrypoints": [
     "static/css/main.19d6cff2.css",
-    "static/js/main.463c7968.js"
+    "static/js/main.e61d202d.js"
   ]
 }
