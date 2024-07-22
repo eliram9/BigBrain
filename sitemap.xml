@@ -9,22 +9,32 @@
 <url>
   <loc>https://www.bigbraintherapy.com/</loc>
   <lastmod>2024-07-11T14:14:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.0</priority>
 </url>
 <url>
   <loc>https://www.bigbraintherapy.com/about</loc>
   <lastmod>2024-07-11T14:14:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.bigbraintherapy.com/emdr</loc>
   <lastmod>2024-07-11T14:14:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.bigbraintherapy.com/resources</loc>
   <lastmod>2024-07-11T14:14:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.bigbraintherapy.com/contact-us</loc>
   <lastmod>2024-07-11T14:14:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.6</priority>
 </url>
 
 </urlset>
