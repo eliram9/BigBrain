@@ -40,7 +40,40 @@
           "contactType": "Customer Service"
         }
       }
-      </script>
+    </script>
+    <!-- Added Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.bigbraintherapy.com/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.bigbraintherapy.com/about"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "EMDR",
+          "item": "https://www.bigbraintherapy.com/emdr"
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Resources",
+          "item": "https://www.bigbraintherapy.com/resources"
+        },{
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact Us",
+          "item": "https://www.bigbraintherapy.com/contact-us"
+        }]
+      }
+    </script>
     <script type="text/javascript">
         (function(l) {
             if (l.search[1] === '/' ) {
