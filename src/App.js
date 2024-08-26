@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Navbar from './components/Navbar'
 import Home from './components/pages/Home';
@@ -21,6 +21,7 @@ function App() {
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/contact-us" element={<Contact />} />
                 <Route path="/schedule" element={<Schedule />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <GoUpButton />
         </div>
