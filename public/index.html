@@ -11,22 +11,25 @@
     gtag('config', 'G-M3VZB0DBYL');
     </script>
     <meta charset="utf-8" />
-    <link rel="icon" href="favicon.png" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="BigBrain Therapy offers EMDR therapy services online to help you overcome trauma and improve your mental health." />
+    <meta
+      name="description"
+      content="BigBrain Therapy offers EMDR therapy services online to help you overcome trauma and improve your mental health."
+    />
     <meta name="keywords" content="EMDR, therapy, online therapy, mental health, trauma, BigBrain Therapy, Potomac, MD, 20854, EMDR 
                therapist Potomac MD, Best EMDR therapy Potomac 20854, Trauma therapy Potomac MD, PTSD therapist Potomac MD, Anxiety therapy Potomac MD, 
                Online EMDR therapy, Virtual EMDR sessions, EMDR for trauma, EMDR for PTSD, EMDR for anxiety, Licensed EMDR therapist, Certified EMDR practitioner, 
                Experienced EMDR therapist, EMDR therapy for adults, EMDR therapy for children, EMDR and trauma therapy Potomac, EMDR therapist near me Potomac, 
                EMDR therapy services Potomac, Affordable EMDR therapy Potomac, Personalized EMDR therapy Potomac" 
     />
-    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="manifest" href="/manifest.json" />
-    <title>BigBrain Therapy</title>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>BigBrain Therapy | EMDR and Mental Health Services</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,7 +44,6 @@
         }
       }
     </script>
-    <!-- Added Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -74,7 +76,11 @@
         }]
       }
     </script>
-    <script type="text/javascript">
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
         (function(l) {
             if (l.search[1] === '/' ) {
             var decoded = l.search.slice(1).split('&').map(function(s) { 
@@ -83,28 +89,6 @@
             window.history.replaceState(null, null,
                 l.pathname.slice(0, -1) + decoded + l.hash
             );
-            }
-        }(window.location))
-    </script>
-</head>
-<body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script>
-        (function(l) {
-            if (l.search) {
-                var q = {};
-                l.search.slice(1).split('&').forEach(function(v) {
-                    var a = v.split('=');
-                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-                });
-                if (q.p !== undefined) {
-                    window.history.replaceState(null, null,
-                        l.pathname.slice(0, -1) + (q.p || '') +
-                        (q.q ? ('?' + q.q) : '') +
-                        l.hash
-                    );
-                }
             }
         }(window.location))
     </script>
