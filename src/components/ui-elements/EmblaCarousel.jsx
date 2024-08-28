@@ -44,7 +44,7 @@ const EmblaCarousel = () => {
             {reviewsData.map((review, index) => (
                 <div key={index} 
                     //  className="embla__slide flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6"
-                    className={`embla__slide flex-shrink-0 xs:w-full sm:w-2/3 md:w-3/5 lg:w-2/6 xl:w-1/4 2xl:w-1/6 ${index === reviewsData.length - 1 ? 'mr-8' : ''}`}
+                    className={`embla__slide flex-shrink-0 xs:w-full sm:w-2/3 md:w-3/5 lg:w-2/6 xl:w-1/4 2xl:w-1/5 ${index === reviewsData.length - 1 ? 'mr-8' : ''}`}
 
                 >
                     <ReviewCard {...review} />
