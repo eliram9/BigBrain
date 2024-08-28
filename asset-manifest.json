@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b6c95c1.css",
-    "main.js": "/static/js/main.82700eda.js",
+    "main.css": "/static/css/main.b2f5ed5a.css",
+    "main.js": "/static/js/main.36865776.js",
     "static/media/Ari.svg": "/static/media/Ari.ce7568c36846210d18ff41fa2f12bf98.svg",
     "static/media/therapyChat.png": "/static/media/therapyChat.267d60eb3597185c47d5.png",
     "static/media/faces.jpg": "/static/media/faces.842818bf54bb2a5718d0.jpg",
     "static/media/man1.jpg": "/static/media/man1.1db24095e4b654849e5f.jpg",
-    "static/media/ross.jpg": "/static/media/ross.ac2fadb0cec13d80888d.jpg",
     "static/media/kolk.jpg": "/static/media/kolk.045987903f5f885cdf73.jpg",
-    "static/media/rachel.jpg": "/static/media/rachel.534cd2312187bdbeb739.jpg",
     "static/media/woman2.jpg": "/static/media/woman2.8a64ffb3736fedd40ed0.jpg",
     "static/media/em.jpg": "/static/media/em.209e8e318db03419117b.jpg",
+    "static/media/woman4.jpg": "/static/media/woman4.29b5f8df62cd7eaac671.jpg",
     "static/media/noticeThat.jpeg": "/static/media/noticeThat.58ece233dca0df4a33ea.jpeg",
     "static/media/woman1.jpg": "/static/media/woman1.1bff995382eeac77325b.jpg",
     "static/media/woman3.jpg": "/static/media/woman3.d24cbec13a58c9ab58b1.jpg",
@@ -19,11 +18,11 @@
     "static/media/Base.svg": "/static/media/Base.0c588a5a8d0c6efa0a3f5f2f0d650f5b.svg",
     "index.html": "/index.html",
     "static/media/hero.svg": "/static/media/hero.942454f632140e382964.svg",
-    "main.8b6c95c1.css.map": "/static/css/main.8b6c95c1.css.map",
-    "main.82700eda.js.map": "/static/js/main.82700eda.js.map"
+    "main.b2f5ed5a.css.map": "/static/css/main.b2f5ed5a.css.map",
+    "main.36865776.js.map": "/static/js/main.36865776.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b6c95c1.css",
-    "static/js/main.82700eda.js"
+    "static/css/main.b2f5ed5a.css",
+    "static/js/main.36865776.js"
   ]
 }
