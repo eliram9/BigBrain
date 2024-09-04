@@ -5,5 +5,5 @@ export function formatDate(timestamp) {
     const year = date.getUTCFullYear(); // Get the year
 
     // Use string concatenation instead of template literals
-    return month + '/' + day + '/' + year; // Return formatted date as MM/DD/YYYY
+    return month + '-' + day + '-' + year; // Return formatted date as MM/DD/YYYY
 }

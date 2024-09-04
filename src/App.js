@@ -10,7 +10,7 @@ import EMDR from './components/pages/EMDR';
 import Schedule from './components/pages/Schedule';
 import GoUpButton from './components/ui-elements/GoUpButton';
 import Blog from './components/pages/Blog';
-import { Article } from './media/icons';
+import ArticleDetail from './components/pages/ArticleDetail';
 
 function App() {
     return (
@@ -24,7 +24,7 @@ function App() {
                 <Route path="/contact-us" element={<Contact />} />
                 <Route path="/schedule" element={<Schedule />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/article/:id" element={<Article />} />
+                <Route path="/blog/article/:id" element={<ArticleDetail />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
             <GoUpButton />
