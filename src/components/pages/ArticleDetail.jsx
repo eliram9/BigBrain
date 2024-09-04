@@ -7,12 +7,14 @@ import PageContainer from '../ui-elements/PageContainer';
 import SectionSubtitle from '../ui-elements/SectionSubtitle';
 import { GET_ARTICLE_DETAIL } from '../quries/fetchArticle';
 import { formatDate } from '../../apollo/formatDate';
+import { sanitizeAndPrepareHtml } from'../../apollo/htmlHandler';
 
 
 const ArticleParagraph = ({ paragraph }) => {
+    const preparedHtml = sanitizeAndPrepareHtml(paragraph);
     return (
         <div className="mb-2 articleContent">
-            {parse(paragraph)}
+            {parse(preparedHtml)}
         </div>
     );
 };
