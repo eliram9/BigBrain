@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import PageContainer from '../ui-elements/PageContainer';
 import Ari from '../../media/Ari.svg';
 
@@ -7,11 +10,17 @@ import { Conversation, Payment } from '../../media/icons';
 import QuoteBox from '../ui-elements/QuoteBox';
 import SectionSubtitle from '../ui-elements/SectionSubtitle';
 import FooterNew from '../FooterNew';
-import { Link } from 'react-router-dom';
+
 
 const About = () => {
     return (
         <>
+            <Helmet>
+                <title>About | BigBrain Therapy</title>
+                <meta name="description" content="Meet Arianne, a licensed certified social worker offering EMDR and psychotherapy in Potomac, MD. Learn about her approach to mental health and what to expect in therapy." />
+                <meta name="keywords" content="Arianne, licensed social worker, EMDR therapy, psychotherapy, Potomac MD, mental health services" />
+                <link rel="canonical" href="https://www.bigbraintherapy.com/about" />
+            </Helmet>
             <section className=''>
                 <PageContainer className='dark:bg-black '>
                     <div className='flex sm:flex-col-reverse md:flex-row items-center justify-between'>
