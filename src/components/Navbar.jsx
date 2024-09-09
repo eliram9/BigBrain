@@ -127,13 +127,13 @@ const Navbar = () => {
                                                       onClick={handleClick} 
                                     />
                                 </div>
-                                <div className="w-full flex justify-center mb-4">
+                                {/* <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/blog" 
                                                       title="Blog" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
                                                       onClick={handleClick} 
                                     />
-                                </div>
+                                </div> */}
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/contact-us" 
                                                       title="Contact" 
@@ -174,7 +174,7 @@ const Navbar = () => {
                             <CustomLink href="/about" title="About" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                             <CustomLink href="/emdr" title="EMDR" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                             <CustomLink href="/resources" title="Resources" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
-                            <CustomLink href="/blog" title="Blog" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
+                            {/* <CustomLink href="/blog" title="Blog" className="ml-10 text-main text-sm md:text-xs dark:font-light" /> */}
                             <CustomLink href="/contact-us" title="Contact" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                         </div>
                     </div>
