@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Navbar from './components/Navbar'
@@ -15,6 +16,11 @@ import ArticleDetail from './components/pages/ArticleDetail';
 function App() {
     return (
         <div className='flex flex-col'>
+            <Helmet>
+                <title>Big Brain Therapy</title>
+                <meta name="description" content="EMDR and mental health services" />
+                <link rel="canonical" href="https://www.bigbraintherapy.com" />
+            </Helmet>
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />

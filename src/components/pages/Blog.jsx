@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { useQuery } from '@apollo/client';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import PageContainer from '../ui-elements/PageContainer';
 import SectionSubtitle from '../ui-elements/SectionSubtitle';
@@ -37,6 +39,12 @@ const Blog = () => {
     
     return (
         <>
+            <Helmet>
+                <title>Blog | BigBrain Therapy</title>
+                <meta name="description" content="Explore our BlogBrain for expert insights on mental health, EMDR therapy, and wellness tips from BigBrain Therapy in Potomac, MD." />
+                <meta name="keywords" content="BlogBrain, mental health blog, EMDR therapy, wellness tips, BigBrain Therapy, Potomac MD" />
+                <link rel="canonical" href="https://www.bigbraintherapy.com/blog" />
+            </Helmet>
             <section className='relative w-full h-auto overflow-hidden'>
                 {/* <HeroGrayBackground className="absolute inset-0 w-full h-full" /> */}
                 <PageContainer className='relative z-10 text-darkGray dark:bg-black pb-32 sm:pb-12 md:pb-16 pt-10'>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Helmet } from 'react-helmet';
+
 import PageContainer from '../ui-elements/PageContainer';
 import { Factory, GirlsPuzzle, HeroGrayBackground } from '../../media/icons';
 import QuoteBox from '../ui-elements/QuoteBox';
@@ -17,6 +19,13 @@ const CircledLetter = ({ letter }) => (
 const EMDR = () => {
     return (
         <>
+            <Helmet>
+                <title>EMDR | BigBrain Therapy</title>
+                <meta name="description" content="Learn about EMDR therapy at BigBrain Therapy in Potomac, MD. Discover how EMDR can help process trauma, reduce anxiety, and improve mental health." />
+                <meta name="keywords" content="EMDR therapy, trauma treatment, anxiety therapy, BigBrain Therapy, Potomac MD, mental health" />
+                <link rel="canonical" href="https://www.bigbraintherapy.com/emdr" />
+            </Helmet>
+
             <section className='relative w-full h-auto overflow-hidden'>
                 <HeroGrayBackground className="absolute inset-0 w-full h-full" />
                 <PageContainer className='relative z-10 text-darkGray dark:bg-black pb-32 sm:pb-12 md:pb-16 pt-10'>
