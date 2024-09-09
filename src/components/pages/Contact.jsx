@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Helmet } from 'react-helmet';
+
 import PageContainer from '../ui-elements/PageContainer';
 import ContactForm from '../ui-elements/ContactForm';
 import SectionSubtitle from '../ui-elements/SectionSubtitle';
@@ -10,6 +13,12 @@ import QuoteBox from '../ui-elements/QuoteBox';
 const Contact = () => {
     return (
         <>
+            <Helmet>
+                <title>Contact | BigBrain Therapy</title>
+                <meta name="description" content="Get in touch with BigBrain Therapy in Potomac, MD. Contact us for EMDR therapy, mental health services, or to schedule a consultation." />
+                <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy consultation, mental health services, Potomac MD" />
+                <link rel="canonical" href="https://www.bigbraintherapy.com/contact-us" />
+            </Helmet>
             <section className="relative dark:bg-black bg-gradient-to-b from-white via bg-black to-white">
             <div 
                             className='absolute inset-0 w-full h-full'
