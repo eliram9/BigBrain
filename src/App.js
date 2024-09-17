@@ -10,8 +10,8 @@ import Contact from './components/pages/Contact';
 import EMDR from './components/pages/EMDR';
 import Schedule from './components/pages/Schedule';
 import GoUpButton from './components/ui-elements/GoUpButton';
-// import Blog from './components/pages/Blog';
-// import ArticleDetail from './components/pages/ArticleDetail';
+import Blog from './components/pages/Blog';
+import ArticleDetail from './components/pages/ArticleDetail';
 
 function App() {
     return (
