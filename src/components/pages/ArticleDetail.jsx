@@ -13,7 +13,7 @@ import { sanitizeAndPrepareHtml } from'../../apollo/htmlHandler';
 const ArticleParagraph = ({ paragraph }) => {
     const preparedHtml = sanitizeAndPrepareHtml(paragraph);
     return (
-        <div className="mb-2 articleContent">
+        <div className="mb-10 articleContent poppins font-light">
             {parse(preparedHtml)}
         </div>
     );
@@ -39,21 +39,40 @@ const ArticleDetail = () => {
 
     return (
         <>
-            <section className='relative w-full h-auto overflow-hidden'>
-                <PageContainer className='relative z-10 text-darkGray dark:bg-black pb-32 sm:pb-12 md:pb-16 pt-10'>
-                    <SectionSubtitle subtitle={article.title} className="mb-20 sm:mb-4" />
-                    <p>Last Update: {formatDate(article.createdDate)}</p>
-                    <p>By: {article.author}</p>
-                    
+            <section className='w-full h-auto overflow-hidden'>
+                <div className='relative'>
+                    <img 
+                        src="https://cdn.pixabay.com/photo/2021/01/05/06/40/boat-5889919_960_720.png" 
+                        alt="boat on water" 
+                        className="w-full max-h-[400px] object-cover"
+                    />
+                    {/* Text overlay */}
+                    {/*                                                                                                                                                                                                                 */}
+                </div>
+                
 
-                    <br />
-
-                    {article.texts?.map((text, index) => (
-                        <ArticleParagraph key={text.id} 
-                                          paragraph={text.paragraph} 
-                        />
-                    ))}
-                </PageContainer>
+                <div className='max-w-[750px] mx-auto'>
+                <div className='flex items-center justify-between pt-6 pb-1'>
+                    <p className='text-slate-500 text-sm font-medium'>some other text whout this category</p>
+                    <p className='text-main text-xs'>&#9679;</p>
+                    <p className='text-main text-sm font-medium'>Last updated: December 1, 2023</p>
+                    <p className='text-main text-xs'>&#9679;</p>
+                    <p className='text-main text-sm font-medium'>6 minutes read</p>
+                </div>
+                <div>
+                    <p className="text-black text-5xl font-bold ">{article?.title}</p>
+                </div>
+                <div>
+                    <p className="text-black text-xl font-semibold py-2">A well-designed blog is your best salesperson. A blog works 24/7 to generate traffic, inform your potential customers, build brand awareness and capture leads when they’re ready to convert. Conversely, a poorly designed blog can lead to a bad first impression,</p>
+                </div>
+                    <div className='h-full mt-10'>
+                        {article.texts?.map((text, index) => (
+                            <ArticleParagraph key={text.id} 
+                                            paragraph={text.paragraph} 
+                            />
+                        ))}
+                    </div>
+                </div>
             </section>
         </>
     );
