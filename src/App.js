@@ -24,7 +24,7 @@ function App() {
                 <link rel="canonical" href="https://www.bigbraintherapy.com" />
             </Helmet>
             <Navbar />
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div></div>}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -39,7 +39,6 @@ function App() {
             </Suspense>
             <Suspense fallback={null}>
                 <GoUpButton />
-                <FooterNew />
             </Suspense>
         </div>
     );
