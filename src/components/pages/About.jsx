@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import PageContainer from '../ui-elements/PageContainer';
-import Ari from '../../media/Ari.svg';
+import Ari from '../../media/Ari.webp';
 
 import { Conversation, Payment } from '../../media/icons';
 import QuoteBox from '../ui-elements/QuoteBox';
