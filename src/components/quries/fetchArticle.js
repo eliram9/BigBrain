@@ -7,6 +7,9 @@ export const GET_ARTICLE_DETAIL = gql`
             title
             author
             createdDate
+            openingImageUrl
+            category
+            summary
             texts {
                 id
                 paragraph
