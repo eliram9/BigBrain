@@ -5,14 +5,16 @@ import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 
 import { GET_ARTICLE_DETAIL } from '../quries/fetchArticle';
-import { formatDate } from '../../apollo/formatDate';
+import { formatFullDate } from '../../apollo/formatDate';
 import { sanitizeAndPrepareHtml } from '../../apollo/htmlHandler';
 import ScrollProgressBar from '../ui-elements/ScrollProgressBar';
+import useCalculateWords from '../hooks/useCalculateWords';
+import FooterNew from '../FooterNew';
 
 const ArticleParagraph = ({ paragraph }) => {
     const preparedHtml = sanitizeAndPrepareHtml(paragraph);
     return (
-        <div className="mb-10 articleContent poppins font-light">
+        <div className="mb-10 articleContent poppins font-light dark:text-white">
             {parse(preparedHtml)}
         </div>
     );
@@ -26,6 +28,7 @@ const ArticleDetail = () => {
     const [article, setArticle] = useState({ texts: [] }); // Initialize with an empty texts array
     const [isSticky, setIsSticky] = useState(false); // Control stickiness
     const imageRef = useRef(null); // Reference to the image
+    const totalWords = useCalculateWords(article.texts);  // Calculate total words using the custom hook
 
     useEffect(() => {
         if (data && data.article) {
@@ -35,32 +38,42 @@ const ArticleDetail = () => {
 
     // Image 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsSticky(!entry.isIntersecting);
-            },
-            { threshold: 0 }
-        );
+        let observer;
+        const setupObserver = () => {
+            observer = new IntersectionObserver(
+                ([entry]) => {
+                    setIsSticky(!entry.isIntersecting);
+                },
+                { threshold: 0 }
+            );
 
-        if (imageRef.current) {
-            observer.observe(imageRef.current);
+            if (imageRef.current) {
+                observer.observe(imageRef.current);
+            }
+        };
+
+        // Set up the observer when the component mounts or when the image loads
+        if (imageRef.current && imageRef.current.complete) {
+            setupObserver();
+        } else if (imageRef.current) {
+            imageRef.current.onload = setupObserver;
         }
 
         return () => {
-            if (imageRef.current) {
+            if (observer && imageRef.current) {
                 observer.unobserve(imageRef.current);
             }
         };
-    }, [imageRef]);
+    }, [imageRef, article.openingImageUrl]); // Add article.openingImageUrl as a dependency
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p></p>;
     if (error) return <p>Error: {error.message}</p>;
 
     console.log(article.texts);
 
     return (
         <>
-            <section className='w-full h-auto overflow-hidden poppins'>
+            <section className='w-full h-auto overflow-hidden mb-20 poppins dark:bg-black'>
                 <div className='relative'>
                     <img 
                         src={article.openingImageUrl}
@@ -74,32 +87,35 @@ const ArticleDetail = () => {
 
                 <div className='max-w-[750px] mx-auto'>
                     <div className='flex items-center justify-between pt-6 pb-1'>
-                        <p className='text-slate-500 text-sm font-medium'>{article.category}</p>
-                        <p className='text-main text-xs'>&#9679;</p>
-                        <p className='text-main text-sm font-medium'>Last updated: {formatDate(article.createdDate)}</p>
-                        <p className='text-main text-xs'>&#9679;</p>
-                        <p className='text-main text-sm font-medium'>6 minutes read</p>
+                        <p className='text-slate-500 text-sm dark:text-lightBanana'><span className='font-medium'>Last updated: </span>{formatFullDate(article.createdDate)}</p>
+                        <p className='text-main text-xs dark:text-banana'>&#9679;</p>
+                        <p className='text-slate-500 text-sm font-medium  dark:text-lightBanana'>{article.category}</p>
+                        <p className='text-main text-xs  dark:text-banana'>&#9679;</p>
+                        <p className='text-main text-sm font-medium  dark:text-lightBanana'>{Math.trunc(totalWords / 200)} minutes read</p> {/* Display total words */}
                     </div>
                     <div>
-                        <p className="text-black text-5xl font-bold ">{article.title}</p>
+                        <p className="text-black text-5xl font-bold dark:text-white">{article.title}</p>
                     </div>
                     <div>
-                        <p className="text-black text-xl font-semibold pb-2 pt-4">{article.summary}</p>
+                        <p className="text-black text-xl font-semibold pb-2 pt-4 dark:text-white">{article.summary}</p>
                     </div>
-                    <div className='py-4 text-gray-500 text-sm'>
+                    <div className='py-4 text-slate-500 text-sm dark:text-lightBanana'>
                         <p>{article.author},</p>
                         <p className=''>EMDR Therapist, LCSW-C</p>
                     </div>
 
                     <div className='h-full mt-10'>
-                        {article.texts?.map((text, index) => (
-                            <ArticleParagraph key={text.id} 
-                                            paragraph={text.paragraph} 
-                            />
-                        ))}
+                    {article.texts?.map((text, index) => {
+    console.log('Text object:', text); // Log the structure of text
+    return (
+        <ArticleParagraph key={text.id || index} paragraph={text.paragraph || text} />
+    );
+})}
                     </div>
                 </div>
+                
             </section>
+            <FooterNew />
         </>
     );
 }
