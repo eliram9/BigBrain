@@ -59,7 +59,7 @@ export const sanitizeAndPrepareHtml = (html) => {
 
         switch (type) {
             case 'youtube':
-                const videoId = url.match(/(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/)[1];
+                const videoId = url.match(/(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/)[1];
                 return `
                     ${responsiveCSS}
                     <div style="display: flex; justify-content: center; margin: 20px 0;">

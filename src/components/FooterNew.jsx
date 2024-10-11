@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Arrow, Envelope, Logo, Phone, Danger } from '../media/icons';
+import { Arrow, Danger } from '../media/icons';
 
 const firstH3 = {
     backgroundImage: 'linear-gradient(to right, #124C5F, #C7E7E1, #EBA8BF)',
