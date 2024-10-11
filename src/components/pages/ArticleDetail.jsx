@@ -53,6 +53,8 @@ const ArticleDetail = () => {
     // Image 
     useEffect(() => {
         let observer;
+        const currentImageRef = imageRef.current; // Save the current reference
+    
         const setupObserver = () => {
             observer = new IntersectionObserver(
                 ([entry]) => {
@@ -60,25 +62,25 @@ const ArticleDetail = () => {
                 },
                 { threshold: 0 }
             );
-
-            if (imageRef.current) {
-                observer.observe(imageRef.current);
+    
+            if (currentImageRef) {
+                observer.observe(currentImageRef);
             }
         };
-
+    
         // Set up the observer when the component mounts or when the image loads
-        if (imageRef.current && imageRef.current.complete) {
+        if (currentImageRef && currentImageRef.complete) {
             setupObserver();
-        } else if (imageRef.current) {
-            imageRef.current.onload = setupObserver;
+        } else if (currentImageRef) {
+            currentImageRef.onload = setupObserver;
         }
-
+    
         return () => {
-            if (observer && imageRef.current) {
-                observer.unobserve(imageRef.current);
+            if (observer && currentImageRef) {
+                observer.unobserve(currentImageRef);
             }
         };
-    }, [imageRef, article.openingImageUrl]); // Add article.openingImageUrl as a dependency
+    }, [imageRef, article.openingImageUrl]); // Keep dependencies as they were
 
     if (loading) return <p></p>;
     if (error) return <p>Error: {error.message}</p>;

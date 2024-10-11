@@ -20,7 +20,7 @@ const Article = ({ id, title, author, createdDate, backgroundImage }) => {
             {/* Background Image Section */}
             <div className='relative h-64 rounded-md overflow-hidden'>
                 <img src={backgroundImage}
-                     alt={`Image for ${title}`}
+                     alt={`${title}`}
                      className='w-full h-full object-cover transform transition-transform duration-500 hover:scale-106'
                      loading='lazy'
                 />

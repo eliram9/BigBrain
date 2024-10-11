@@ -3,27 +3,27 @@ import React, { useEffect, useState } from 'react';
 import { Danger } from '../media/icons';
 
 
-const firstH3 = {
-    backgroundImage: 'linear-gradient(to right, #124C5F, #C7E7E1, #EBA8BF)',
-    WebkitBackgroundClip: 'text',
-    backgroundClip: 'text',
-    color: 'transparent',
-    display: 'inline',
-    fontWeight: 600,
-}
+// const firstH3 = {
+//     backgroundImage: 'linear-gradient(to right, #124C5F, #C7E7E1, #EBA8BF)',
+//     WebkitBackgroundClip: 'text',
+//     backgroundClip: 'text',
+//     color: 'transparent',
+//     display: 'inline',
+//     fontWeight: 600,
+// }
 
-const secondH3 = {
-    backgroundImage: 'linear-gradient(to right, #EBA8BF, #C7E7E1, #124C5F )',
-    WebkitBackgroundClip: 'text',
-    backgroundClip: 'text',
-    color: 'transparent',
-    display: 'inline',
-    fontWeight: 600
-}
+// const secondH3 = {
+//     backgroundImage: 'linear-gradient(to right, #EBA8BF, #C7E7E1, #124C5F )',
+//     WebkitBackgroundClip: 'text',
+//     backgroundClip: 'text',
+//     color: 'transparent',
+//     display: 'inline',
+//     fontWeight: 600
+// }
 
 const ContactFooter = () => {
     const currentYear = new Date().getFullYear();
-    const [bannerWidth, setBannerWidth] = useState("");
+    // const [bannerWidth, setBannerWidth] = useState("");
 
     useEffect(() => {
         const calculateWidth = () => {
@@ -38,7 +38,7 @@ const ContactFooter = () => {
                 newWidth = `${screenWidth * 0.65}px`; // 50% of the screen width for larger screens
             }
         
-            setBannerWidth(newWidth);
+            // setBannerWidth(newWidth);
         };
     
         calculateWidth();
