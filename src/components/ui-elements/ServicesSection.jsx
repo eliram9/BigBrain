@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom'
-import { Bulb, Calendar, FQA, Info, Puzzle } from '../../media/icons'
+import { Bulb, Calendar, Info, Puzzle } from '../../media/icons'
 import SectionSubtitle from './SectionSubtitle';
 
-const ServiceCard = ({ title, href, icon: IconComponent, className, border, bg }) => {
+const ServiceCard = ({ title, href, icon: IconComponent, border, bg }) => {
     return (
         <Link to={href}
               onClick={() => window.scrollTo(0, 0)}

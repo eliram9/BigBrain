@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GoUp, UpArrow } from '../../media/icons';
+import { GoUp } from '../../media/icons';
 
 const GoUpButton = () => {
     const [showButton, setShowButton] = useState(false);

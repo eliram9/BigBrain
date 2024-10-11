@@ -55,7 +55,7 @@ const Blog = () => {
     // Error state
     if (error) return <p>Error :( {error.message}</p>;
 
-    console.log(data.articles);
+    // console.log(data.articles);
     return (
         <>
             <Helmet>

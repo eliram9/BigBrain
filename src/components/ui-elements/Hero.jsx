@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import useScreenSize from '../hooks/useScreenSize';
+
 import { BrainGear, ContactUs, Explore } from '../../media/icons';
 import PageContainer from './PageContainer';
 
 const Hero = () => {
-    const isSmallScreen = useScreenSize();
 
     return (
         <section className="relative w-full min-h-screen flex items-center justify-center poppins dark:bg-black">

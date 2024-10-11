@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 import { useQuery } from '@apollo/client';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 
 import { GET_ARTICLE_DETAIL } from '../quries/fetchArticle';
@@ -83,7 +83,7 @@ const ArticleDetail = () => {
     if (loading) return <p></p>;
     if (error) return <p>Error: {error.message}</p>;
 
-    console.log(article.texts);
+    // console.log(article.texts);
 
     return (
         <>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
-import { Arrow, Envelope, Logo, Phone, Danger } from '../media/icons';
+import { Danger } from '../media/icons';
 
 
 const firstH3 = {

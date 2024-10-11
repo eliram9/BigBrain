@@ -25,7 +25,7 @@ const ContactForm = () => {
 
     emailjs.send('service_7akd5q8', 'template_jl2z84d', formInputs, 'O9q0VZ9cLLSlaWNod')
       .then((result) => {
-        console.log(result.text);
+        // console.log(result.text);
         setSubmissionStatus('Email sent successfully!');
         setFormInputs({
           first_name: '',
@@ -38,7 +38,7 @@ const ContactForm = () => {
           setSubmissionStatus('');
         }, 5000);
       }, (error) => {
-        console.log(error.text);
+        // console.log(error.text);
         setSubmissionStatus('Failed to send email. Please try again.');
         setTimeout(() => {
           setSubmissionStatus('');
