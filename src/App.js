@@ -13,7 +13,7 @@ const Schedule = lazy(() => import('./components/pages/Schedule'));
 const Blog = lazy(() => import('./components/pages/Blog'));
 const ArticleDetail = lazy(() => import('./components/pages/ArticleDetail'));
 const GoUpButton = lazy(() => import('./components/ui-elements/GoUpButton'));
-const FooterNew = lazy(() => import('./components/FooterNew'));
+
 
 function App() {
     return (
@@ -32,8 +32,8 @@ function App() {
                     <Route path="/resources" element={<Resources />} />
                     <Route path="/contact-us" element={<Contact />} />
                     <Route path="/schedule" element={<Schedule />} />
-                    {/* <Route path="/blog" element={<Blog />} />
-                    <Route path="/blog/article/:id" element={<ArticleDetail />} /> */}
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/article/:id" element={<ArticleDetail />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </Suspense>

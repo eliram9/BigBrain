@@ -7,6 +7,7 @@ export const GET_ALL_ARTICLES = gql`
             title
             author
             createdDate
+            openingImageUrl
         }
     }
 `;

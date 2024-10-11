@@ -1,23 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+
 import { useQuery } from '@apollo/client';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-import PageContainer from '../ui-elements/PageContainer';
-import SectionSubtitle from '../ui-elements/SectionSubtitle';
 import { GET_ARTICLE_DETAIL } from '../quries/fetchArticle';
-import { formatDate } from '../../apollo/formatDate';
-import { sanitizeAndPrepareHtml } from'../../apollo/htmlHandler';
-
+import { formatFullDate } from '../../apollo/formatDate';
+import { sanitizeAndPrepareHtml } from '../../apollo/htmlHandler';
+import ScrollProgressBar from '../ui-elements/ScrollProgressBar';
+import useCalculateWords from '../hooks/useCalculateWords';
+import ContactFooter from '../ContactFooter';
 
 const ArticleParagraph = ({ paragraph }) => {
     const preparedHtml = sanitizeAndPrepareHtml(paragraph);
     return (
-        <div className="mb-10 articleContent poppins font-light">
+        <div className="prose prose-blog dark:prose-invert max-w-none">
             {parse(preparedHtml)}
         </div>
     );
 };
+
+const ArticleSource = ({ sourceName, url }) => {
+    return (
+        <li className='text-darkGray py-2 text-md xs:text-[10px] sm:text-xs'>
+            <a href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-main underline hover:text-main/80"
+            >
+                {sourceName}
+            </a>
+        </li>
+    );
+  }
 
 const ArticleDetail = () => { 
     const { id } = useParams(); // Extract the article ID from the URL parameters
@@ -25,12 +40,45 @@ const ArticleDetail = () => {
         variables: { id },
     });
     const [article, setArticle] = useState({ texts: [] }); // Initialize with an empty texts array
+    const [isSticky, setIsSticky] = useState(false); // Control stickiness
+    const imageRef = useRef(null); // Reference to the image
+    const totalWords = useCalculateWords(article.texts);  // Calculate total words using the custom hook
 
     useEffect(() => {
         if (data && data.article) {
             setArticle(data.article);
         }
     }, [data]);
+
+    // Image 
+    useEffect(() => {
+        let observer;
+        const setupObserver = () => {
+            observer = new IntersectionObserver(
+                ([entry]) => {
+                    setIsSticky(!entry.isIntersecting);
+                },
+                { threshold: 0 }
+            );
+
+            if (imageRef.current) {
+                observer.observe(imageRef.current);
+            }
+        };
+
+        // Set up the observer when the component mounts or when the image loads
+        if (imageRef.current && imageRef.current.complete) {
+            setupObserver();
+        } else if (imageRef.current) {
+            imageRef.current.onload = setupObserver;
+        }
+
+        return () => {
+            if (observer && imageRef.current) {
+                observer.unobserve(imageRef.current);
+            }
+        };
+    }, [imageRef, article.openingImageUrl]); // Add article.openingImageUrl as a dependency
 
     if (loading) return <p></p>;
     if (error) return <p>Error: {error.message}</p>;
@@ -39,41 +87,72 @@ const ArticleDetail = () => {
 
     return (
         <>
-            <section className='w-full h-auto overflow-hidden'>
+            <section className='w-full h-auto overflow-hidden poppins dark:bg-black poppins'>
                 <div className='relative'>
                     <img 
-                        src="https://cdn.pixabay.com/photo/2021/01/05/06/40/boat-5889919_960_720.png" 
-                        alt="boat on water" 
+                        src={article.openingImageUrl}
+                        alt={article.title} 
                         className="w-full max-h-[400px] object-cover"
-                    />
-                    {/* Text overlay */}
-                    {/*                                                                                                                                                                                                                 */}
-                </div>
-                
+                        ref={imageRef}
+                    />                                                                                                                                                                                                       
+                </div>  
 
-                <div className='max-w-[750px] mx-auto'>
-                <div className='flex items-center justify-between pt-6 pb-1'>
-                    <p className='text-slate-500 text-sm font-medium'>some other text whout this category</p>
-                    <p className='text-main text-xs'>&#9679;</p>
-                    <p className='text-main text-sm font-medium'>Last updated: December 1, 2023</p>
-                    <p className='text-main text-xs'>&#9679;</p>
-                    <p className='text-main text-sm font-medium'>6 minutes read</p>
-                </div>
-                <div>
-                    <p className="text-black text-5xl font-bold ">{article?.title}</p>
-                </div>
-                <div>
-                    <p className="text-black text-xl font-semibold py-2">A well-designed blog is your best salesperson. A blog works 24/7 to generate traffic, inform your potential customers, build brand awareness and capture leads when they’re ready to convert. Conversely, a poorly designed blog can lead to a bad first impression,</p>
-                </div>
-                    <div className='h-full mt-10'>
-                        {article.texts?.map((text, index) => (
-                            <ArticleParagraph key={text.id} 
-                                            paragraph={text.paragraph} 
-                            />
-                        ))}
+                <ScrollProgressBar isSticky={isSticky} />   {/* Scroll Progress Bar Positioned Below the Image */}
+
+                <div className='max-w-[750px] mx-auto md:px-[2rem]'>
+                    <div className='flex items-center justify-between pt-6 pb-1'>
+                        <p className='text-slate-500 text-sm  dark:text-lightBanana xs:text-[8px] sm:text-xs'><span className='font-medium'>Last updated: </span>{formatFullDate(article.createdDate)}</p>
+                        <p className='text-main text-xs dark:text-banana'>&#9679;</p>
+                        <p className='text-slate-500 text-sm font-medium dark:text-lightBanana xs:text-[8px] sm:text-xs'>{article.category}</p>
+                        <p className='text-main text-xs  dark:text-banana'>&#9679;</p>
+                        <p className='text-main text-sm font-medium  dark:text-lightBanana xs:text-[8px] sm:text-xs'>{Math.trunc(totalWords / 200)} minutes read</p> {/* Display total words */}
                     </div>
-                </div>
+                    <div>
+                        <h1 className="text-black text-5xl font-bold dark:text-white mt-10 mb-5 
+                                      xs:text-2xl lg:text-4xl"
+                        >
+                            {article.title}
+                    </h1>
+                    </div>
+                    <div>
+                        <p className="text-black text-xl font-semibold pb-2 pt-4 dark:text-white
+                                     sm:text-lg"
+                        >
+                            {article.summary}
+                        </p>
+                    </div>
+                    <div className='py-4 text-slate-500 text-sm dark:text-lightBanana'>
+                        <p className='font-medium'>By: {article.author}</p>
+                        <p className='xs:text-xs'>EMDR Therapist, LCSW-C</p>
+                    </div>
+
+                    <hr />
+
+                    <div className='h-full mt-10 leading-loose mb-40'>
+                        {article.texts?.map((text, index) => {
+                            return (
+                                <ArticleParagraph key={text.id || index} paragraph={text.paragraph || text} />
+                            );
+                        })}
+                    </div>
+                    
+                    <hr />
+                    {article.sources && article.sources.length > 0 && (
+                        <div className="bg-babyBlue px-5 py-5 mt-10 rounded-lg mb-20 xs:mb-0">
+                            <h2 className="text-darkGray text-xl font-semibold mb-4 md:text-sm">Sources</h2>
+                            <ol className="list-decimal list-inside space-y-2">
+                                {article.sources.map((source) => (
+                                    <ArticleSource key={source.id}
+                                                sourceName={source.sourceName}
+                                                url={source.url}
+                                    />
+                                ))}
+                            </ol>
+                        </div>
+                    )}
+                </div>    
             </section>
+            <ContactFooter />
         </>
     );
 }

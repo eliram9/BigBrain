@@ -8,30 +8,32 @@ const CustomLink = ({ href, title, className = "" }) => {
     return (
         <Link to={href} className={`${className} relative group dark:text-white`}>
             {title}
-            <span className={`absolute h-[1px] inline-block bg-main left-0 -bottom-0.5
-                            group-hover:w-full transition-[width] ease duration-800"
-                            ${location.pathname === href ? "w-full" : "w-0"} dark:bg-white`}
+            <span
+                className={`absolute h-[1px] inline-block bg-main left-0 -bottom-0.5
+                group-hover:w-full transition-[width] ease duration-800
+                ${location.pathname === href ? "w-full" : "w-0"} dark:bg-white`}
             >
                 &nbsp;
             </span>
         </Link>
     );
-}
+};
 
 const MobileCustomLink = ({ href, title, className = "", onClick }) => {
     let location = useLocation();
     return (
         <Link to={href} className={`${className} relative group`} onClick={onClick}>
             {title}
-            <span className={`absolute h-[1px] inline-block bg-white dark:bg-black left-0 -bottom-0.5
-                            group-hover:w-full transition-[width] ease duration-800
-                            ${location.pathname === href ? "w-full" : "w-0"}`}
+            <span
+                className={`absolute h-[1px] inline-block bg-white dark:bg-black left-0 -bottom-0.5
+                group-hover:w-full transition-[width] ease duration-800
+                ${location.pathname === href ? "w-full" : "w-0"}`}
             >
                 &nbsp;
             </span>
         </Link>
     );
-}
+};
 
 const Navbar = () => {
     const [theme, toggleTheme] = useThemeSwitcher();
@@ -84,7 +86,7 @@ const Navbar = () => {
 
             {/* Responsive menu */}
             { isOpen ? 
-                <div ref={menuRef} className='hidden z-30 lg:flex flex-col justify-between items-center fixed top-[20%] left-1/2 -translate-x-1/2 rounded-xl backdrop-blur-md 
+                <div ref={menuRef} className='hidden z-50 lg:flex flex-col justify-between items-center fixed top-[20%] left-1/2 -translate-x-1/2 rounded-xl backdrop-blur-md 
                               bg-slate-900/80 dark:bg-white/50 px-4 py-16 min-w-[80vw]' 
                 >
                     <nav className="flex flex-col items-center justify-between">
@@ -127,13 +129,13 @@ const Navbar = () => {
                                                       onClick={handleClick} 
                                     />
                                 </div>
-                                {/* <div className="w-full flex justify-center mb-4">
+                                <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/blog" 
                                                       title="Blog" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
                                                       onClick={handleClick} 
                                     />
-                                </div> */}
+                                </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/contact-us" 
                                                       title="Contact" 
@@ -174,7 +176,7 @@ const Navbar = () => {
                             <CustomLink href="/about" title="About" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                             <CustomLink href="/emdr" title="EMDR" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                             <CustomLink href="/resources" title="Resources" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
-                            {/* <CustomLink href="/blog" title="Blog" className="ml-10 text-main text-sm md:text-xs dark:font-light" /> */}
+                            <CustomLink href="/blog" title="Blog" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                             <CustomLink href="/contact-us" title="Contact" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                         </div>
                     </div>
