@@ -20,7 +20,7 @@ const ScrollProgressBar = ({ isSticky }) => {
 
     return (
         <div
-            className={`w-full h-2 bg-gray-200 z-50 ${isSticky ? 'fixed top-0' : 'relative'}`}
+            className={`w-full h-2 bg-gray-200 z-40 ${isSticky ? 'fixed top-0' : 'relative'}`}
             aria-hidden="true"
         >
             <div

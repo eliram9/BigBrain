@@ -14,6 +14,11 @@ export const GET_ARTICLE_DETAIL = gql`
                 id
                 paragraph
             }
+            sources{
+                id
+                sourceName
+                url
+            }
         }
     }
 `;

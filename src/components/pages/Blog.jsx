@@ -15,7 +15,7 @@ import FooterNew from '../FooterNew';
 const Article = ({ id, title, author, createdDate, backgroundImage }) => {
     return (
         <Link to={`/blog/article/${id}`}
-              className='block cursor-pointer border-2 border-main p-6 rounded-md overflow-hidden transition duration-300 transform hover:scale-105 hover:bg-blue'
+              className='block cursor-pointer border-2 border-main p-6 rounded-md overflow-hidden transition duration-300 transform hover:scale-105 hover:bg-blue dark:border-blue dark:bg-darkGray'
         >
             {/* Background Image Section */}
             <div className='relative h-64 rounded-md overflow-hidden'>
@@ -34,10 +34,10 @@ const Article = ({ id, title, author, createdDate, backgroundImage }) => {
 
             {/* Article Details */}
             <div className='mt-4'>
-                <p className='text-sm font-medium text-gray-700'>
+                <p className='text-sm font-medium text-gray-700 dark:text-blue'>
                     Author: {author ? author : "N/A"}
                 </p>
-                <p className='text-sm text-gray-500'>
+                <p className='text-sm text-gray-500 dark:text-blue'>
                     Created Date: {formatDate(createdDate)}
                 </p>
             </div>
@@ -64,11 +64,11 @@ const Blog = () => {
                 <meta name="keywords" content="BlogBrain, mental health blog, EMDR therapy, wellness tips, BigBrain Therapy, Potomac MD" />
                 <link rel="canonical" href="https://www.bigbraintherapy.com/blog" />
             </Helmet>
-            <section className='relative w-full h-auto overflow-hidden'>
+            <section className='relative w-full h-auto overflow-hidden dark:bg-black'>
                 {/* <HeroGrayBackground className="absolute inset-0 w-full h-full" /> */}
                 <PageContainer className='relative z-10 text-darkGray dark:bg-black pb-32 sm:pb-12 md:pb-16 pt-10 mb-20'>
                     <SectionSubtitle subtitle="BlogBrain" className="mb-20 sm:mb-4" />
-                        <div className='grid grid-cols-3 gap-10'>
+                        <div className='grid grid-cols-3 gap-10 sm:block md:grid md:grid-cols-2 md:gaap-10'>
                             {/* Render the list of articles */}
                             {data.articles.map((article, index) => (
                                 <Article key={article.id} 
