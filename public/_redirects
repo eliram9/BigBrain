@@ -1,1 +1,8 @@
-/* /index.html 200
+# Redirect from HTTP to HTTPS
+http://*   https://%{host}%{request_uri}   301
+
+# Redirect from www to non-www
+https://www.bigbraintherapy.com/*   https://bigbraintherapy.com/:splat   301
+
+# SPA Fallback
+/*   /index.html   200
