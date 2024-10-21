@@ -19,7 +19,7 @@ const About = () => {
                 <title>About | BigBrain Therapy</title>
                 <meta name="description" content="Meet Arianne, a licensed certified social worker offering EMDR and psychotherapy in Potomac, MD. Learn about her approach to mental health and what to expect in therapy." />
                 <meta name="keywords" content="Arianne, licensed social worker, EMDR therapy, psychotherapy, Potomac MD, mental health services" />
-                <link rel="canonical" href="https://www.bigbraintherapy.com/about" />
+                <link rel="canonical" href="https://bigbraintherapy.com/about" />
             </Helmet>
             <section className=''>
                 <PageContainer className='dark:bg-black '>

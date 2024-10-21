@@ -16,7 +16,7 @@ const Home = () => {
             <Helmet>
                 <title>BigBrain Therapy | EMDR and Mental Health Services</title>
                 <meta name="description" content="Big Brain Therapy offers professional EMDR and mental health services in Potomac, MD. Discover effective treatments for trauma, anxiety, and more to improve your well-being." />
-                <link rel="canonical" href="https://www.bigbraintherapy.com" />
+                <link rel="canonical" href="https://bigbraintherapy.com" />
                 <meta name="keywords" content="EMDR therapy, mental health, trauma treatment, anxiety therapy, Potomac, MD therapist" />
             </Helmet>       
             <section className="w-full h-screen">

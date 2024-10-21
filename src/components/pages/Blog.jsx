@@ -62,7 +62,7 @@ const Blog = () => {
                 <title>Blog | BigBrain Therapy</title>
                 <meta name="description" content="Explore our BlogBrain for expert insights on mental health, EMDR therapy, and wellness tips from BigBrain Therapy in Potomac, MD." />
                 <meta name="keywords" content="BlogBrain, mental health blog, EMDR therapy, wellness tips, BigBrain Therapy, Potomac MD" />
-                <link rel="canonical" href="https://www.bigbraintherapy.com/blog" />
+                <link rel="canonical" href="https://bigbraintherapy.com/blog" />
             </Helmet>
             <section className='relative w-full h-auto overflow-hidden dark:bg-black'>
                 {/* <HeroGrayBackground className="absolute inset-0 w-full h-full" /> */}

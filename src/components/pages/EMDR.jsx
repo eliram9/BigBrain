@@ -23,7 +23,7 @@ const EMDR = () => {
                 <title>EMDR | BigBrain Therapy</title>
                 <meta name="description" content="Learn about EMDR therapy at BigBrain Therapy in Potomac, MD. Discover how EMDR can help process trauma, reduce anxiety, and improve mental health." />
                 <meta name="keywords" content="EMDR therapy, trauma treatment, anxiety therapy, BigBrain Therapy, Potomac MD, mental health" />
-                <link rel="canonical" href="https://www.bigbraintherapy.com/emdr" />
+                <link rel="canonical" href="https://bigbraintherapy.com/emdr" />
             </Helmet>
 
             <section className='relative w-full h-auto overflow-hidden'>
