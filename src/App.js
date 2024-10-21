@@ -21,7 +21,7 @@ function App() {
             <Helmet>
                 <title>Big Brain Therapy</title>
                 <meta name="description" content="EMDR and mental health services" />
-                <link rel="canonical" href="https://www.bigbraintherapy.com" />
+                <link rel="canonical" href="https://bigbraintherapy.com" />
             </Helmet>
             <Navbar />
             <Suspense fallback={<div></div>}>

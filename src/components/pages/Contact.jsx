@@ -17,7 +17,7 @@ const Contact = () => {
                 <title>Contact | BigBrain Therapy</title>
                 <meta name="description" content="Get in touch with BigBrain Therapy in Potomac, MD. Contact us for EMDR therapy, mental health services, or to schedule a consultation." />
                 <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy consultation, mental health services, Potomac MD" />
-                <link rel="canonical" href="https://www.bigbraintherapy.com/contact-us" />
+                <link rel="canonical" href="https://bigbraintherapy.com/contact-us" />
             </Helmet>
             <section className="relative dark:bg-black bg-gradient-to-b from-white via bg-black to-white">
             <div 

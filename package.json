@@ -2,7 +2,8 @@
   "name": "bigbrain",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.bigbraintherapy.com",
+  "homepage": "https://bigbraintherapy.com",
+  "author": "eliram9",
   "dependencies": {
     "@apollo/client": "^3.11.5",
     "@emailjs/browser": "^4.3.3",

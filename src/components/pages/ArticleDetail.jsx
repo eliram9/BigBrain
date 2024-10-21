@@ -94,11 +94,11 @@ const ArticleDetail = () => {
                 <title>{`${article.title} | BigBrain Therapy Blog`}</title>
                 <meta name="description" content={article.summary} />
                 <meta name="keywords" content={`${article.category}, EMDR therapy, mental health, BigBrain Therapy, ${article.author}`} />
-                <link rel="canonical" href={`https://www.bigbraintherapy.com/blog/article/${id}`} />
+                <link rel="canonical" href={`https://bigbraintherapy.com/blog/article/${id}`} />
                 <meta property="og:title" content={article.title} />
                 <meta property="og:description" content={article.summary} />
                 <meta property="og:image" content={article.openingImageUrl} />
-                <meta property="og:url" content={`https://www.bigbraintherapy.com/blog/article/${id}`} />
+                <meta property="og:url" content={`https://bigbraintherapy.com/blog/article/${id}`} />
                 <meta property="og:type" content="article" />
             </Helmet>
             <section className='w-full h-auto overflow-hidden poppins dark:bg-black poppins'>
