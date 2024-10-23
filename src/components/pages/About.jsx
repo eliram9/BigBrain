@@ -18,8 +18,46 @@ const About = () => {
             <Helmet>
                 <title>About | BigBrain Therapy</title>
                 <meta name="description" content="Meet Arianne, a licensed certified social worker offering EMDR and psychotherapy in Potomac, MD. Learn about her approach to mental health and what to expect in therapy." />
-                <meta name="keywords" content="Arianne, licensed social worker, EMDR therapy, psychotherapy, Potomac MD, mental health services" />
                 <link rel="canonical" href="https://bigbraintherapy.com/about" />
+
+                {/* Structured Data for Organization */}
+                <script type="application/ld+json">
+                    {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "Organization",
+                      "url": "https://bigbraintherapy.com",
+                      "logo": "https://bigbraintherapy.com/logo192.png",
+                      "name": "BigBrain Therapy",
+                      "contactPoint": {
+                        "@type": "ContactPoint",
+                        "telephone": "+1-301-337-5676",
+                        "contactType": "Customer Service"
+                      }
+                    }
+                    `}
+                </script>
+
+                {/* Structured Data for Breadcrumbs specific to About */}
+                <script type="application/ld+json">
+                    {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "BreadcrumbList",
+                      "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://bigbraintherapy.com/"
+                      },{
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "About",
+                        "item": "https://bigbraintherapy.com/about"
+                      }]
+                    }
+                    `}
+                </script>
             </Helmet>
             <section className=''>
                 <PageContainer className='dark:bg-black '>
