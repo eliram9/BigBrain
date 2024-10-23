@@ -14,11 +14,54 @@ const Contact = () => {
     return (
         <>
             <Helmet>
-                <title>Contact | BigBrain Therapy</title>
-                <meta name="description" content="Get in touch with BigBrain Therapy in Potomac, MD. Contact us for EMDR therapy, mental health services, or to schedule a consultation." />
-                <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy consultation, mental health services, Potomac MD" />
+                <title>Contact Us | BigBrain Therapy</title>
+                <meta name="description" content="Get in touch with BigBrain Therapy for EMDR therapy services. Contact us today to book your consultation." />
+                <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy contact, schedule consultation" />
                 <link rel="canonical" href="https://bigbraintherapy.com/contact-us" />
+                
+                {/* Structured Data for Organization */}
+                <script type="application/ld+json">
+                {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "url": "https://bigbraintherapy.com",
+                        "logo": "https://bigbraintherapy.com/logo192.png",
+                        "name": "BigBrain Therapy",
+                        "contactPoint": {
+                          "@type": "ContactPoint",
+                          "telephone": "+1-301-337-5676",
+                          "contactType": "Customer Service"
+                        }
+                    }
+                `}
+                </script>
+
+                {/* Structured Data for Breadcrumbs */}
+                <script type="application/ld+json">
+                {`
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://bigbraintherapy.com/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Contact Us",
+                                "item": "https://bigbraintherapy.com/contact-us"
+                            }
+                        ]
+                    }
+                `}
+                </script>
             </Helmet>
+
             <section className="relative dark:bg-black bg-gradient-to-b from-white via bg-black to-white">
             <div 
                             className='absolute inset-0 w-full h-full'

@@ -14,11 +14,44 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>BigBrain Therapy | EMDR and Mental Health Services</title>
-                <meta name="description" content="Big Brain Therapy offers professional EMDR and mental health services in Potomac, MD. Discover effective treatments for trauma, anxiety, and more to improve your well-being." />
+                <title>Big Brain Therapy</title>
+                <meta name="description" content="Welcome to BigBrain Therapy, your resource for EMDR and mental health services." />
                 <link rel="canonical" href="https://bigbraintherapy.com" />
-                <meta name="keywords" content="EMDR therapy, mental health, trauma treatment, anxiety therapy, Potomac, MD therapist" />
-            </Helmet>       
+
+                {/* Structured Data for Organization */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "url": "https://bigbraintherapy.com",
+                        "logo": "https://bigbraintherapy.com/logo192.png",
+                        "name": "BigBrain Therapy",
+                        "contactPoint": {
+                            "@type": "ContactPoint",
+                            "telephone": "+1-301-337-5676",
+                            "contactType": "Customer Service"
+                        }
+                        }
+                    `}
+                </script>
+
+                {/* Structured Data for Breadcrumbs specific to Home */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://bigbraintherapy.com/"
+                        }]
+                        }
+                    `}
+                </script>
+            </Helmet>   
             <section className="w-full h-screen">
                 <Hero />
                 <PageContainer className="bg-gradient-to-b from-transparent to-cream dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-black">
