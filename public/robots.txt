@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Main Pages
+Allow: /about
+Allow: /emdr
+Allow: /resources
+Allow: /blog
+Allow: /contact-us
+Allow: /schedule
+
+# Main Sitemap
 Sitemap: https://bigbraintherapy.com/sitemap.xml
