@@ -18,7 +18,7 @@ const Home = () => {
                 <meta name="description" content="Welcome to BigBrain Therapy, your resource for EMDR and mental health services." />
                 <link rel="canonical" href="https://bigbraintherapy.com" />
 
-                {/* Enhanced Structured Data for Organization */}
+                {/* Enhanced Structured Data for Organization  - ONLY IN HOME.JSX*/}
                 <script type="application/ld+json">
                     {`
                         {
