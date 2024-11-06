@@ -2,6 +2,19 @@
   publish = "build"
   command = "npm run build"
 
+# Force HTTPS and www to non-www redirect
+[[redirects]]
+  from = "http://*.bigbraintherapy.com/*"
+  to = "https://bigbraintherapy.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.bigbraintherapy.com/*"
+  to = "https://bigbraintherapy.com/:splat"
+  status = 301
+  force = true
+
 # Handle SPA routing
 [[redirects]]
   from = "/*"

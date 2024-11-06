@@ -24,24 +24,6 @@ const EMDR = () => {
                 <meta name="description" content="Learn about EMDR therapy and how it helps reprocess traumatic memories to improve mental health." />
                 <link rel="canonical" href="https://bigbraintherapy.com/emdr" />
 
-                {/* Structured Data for Organization */}
-                <script type="application/ld+json">
-                    {`
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "Organization",
-                      "url": "https://bigbraintherapy.com",
-                      "logo": "https://bigbraintherapy.com/logo192.png",
-                      "name": "BigBrain Therapy",
-                      "contactPoint": {
-                        "@type": "ContactPoint",
-                        "telephone": "+1-301-337-5676",
-                        "contactType": "Customer Service"
-                      }
-                    }
-                    `}
-                </script>
-
                 {/* Structured Data for Breadcrumbs specific to EMDR */}
                 <script type="application/ld+json">
                     {`

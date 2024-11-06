@@ -86,8 +86,6 @@ const ArticleDetail = () => {
     if (loading) return <p></p>;
     if (error) return <p>Error: {error.message}</p>;
 
-    // console.log(article.texts);
-
     return (
         <>
             <Helmet>
@@ -100,6 +98,67 @@ const ArticleDetail = () => {
                 <meta property="og:image" content={article.openingImageUrl} />
                 <meta property="og:url" content={`https://bigbraintherapy.com/blog/article/${id}`} />
                 <meta property="og:type" content="article" />
+
+                {/* Add Breadcrumbs schema */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://bigbraintherapy.com/"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://bigbraintherapy.com/blog"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "${article.title}",
+                                    "item": "https://bigbraintherapy.com/blog/article/${id}"
+                                }
+                            ]
+                        }
+                    `}
+                </script>
+
+                {/* Add Article schema */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Article",
+                            "headline": "${article.title}",
+                            "image": "${article.openingImageUrl}",
+                            "author": {
+                                "@type": "Person",
+                                "name": "${article.author}"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "BigBrain Therapy",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://bigbraintherapy.com/logo192.png"
+                                }
+                            },
+                            "datePublished": "${article.createdDate}",
+                            "dateModified": "${article.createdDate}",
+                            "description": "${article.summary}",
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": "https://bigbraintherapy.com/blog/article/${id}"
+                            }
+                        }
+                    `}
+                </script>
             </Helmet>
             <section className='w-full h-auto overflow-hidden poppins dark:bg-black poppins'>
                 <div className='relative'>
@@ -119,14 +178,14 @@ const ArticleDetail = () => {
                         <p className='text-main text-xs dark:text-banana'>&#9679;</p>
                         <p className='text-slate-500 text-sm font-medium dark:text-lightBanana xs:text-[8px] sm:text-xs'>{article.category}</p>
                         <p className='text-main text-xs  dark:text-banana'>&#9679;</p>
-                        <p className='text-main text-sm font-medium  dark:text-lightBanana xs:text-[8px] sm:text-xs'>{Math.trunc(totalWords / 200)} minutes read</p> {/* Display total words */}
+                        <p className='text-main text-sm font-medium  dark:text-lightBanana xs:text-[8px] sm:text-xs'>{Math.trunc(totalWords / 200)} minutes read</p>
                     </div>
                     <div>
                         <h1 className="text-black text-5xl font-bold dark:text-white mt-10 mb-5 
                                       xs:text-2xl lg:text-4xl"
                         >
                             {article.title}
-                    </h1>
+                        </h1>
                     </div>
                     <div>
                         <p className="text-black text-xl font-semibold pb-2 pt-4 dark:text-white

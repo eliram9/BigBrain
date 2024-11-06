@@ -19,24 +19,6 @@ const Contact = () => {
                 <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy contact, schedule consultation" />
                 <link rel="canonical" href="https://bigbraintherapy.com/contact-us" />
                 
-                {/* Structured Data for Organization */}
-                <script type="application/ld+json">
-                {`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "url": "https://bigbraintherapy.com",
-                        "logo": "https://bigbraintherapy.com/logo192.png",
-                        "name": "BigBrain Therapy",
-                        "contactPoint": {
-                          "@type": "ContactPoint",
-                          "telephone": "+1-301-337-5676",
-                          "contactType": "Customer Service"
-                        }
-                    }
-                `}
-                </script>
-
                 {/* Structured Data for Breadcrumbs */}
                 <script type="application/ld+json">
                 {`
