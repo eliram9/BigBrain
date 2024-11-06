@@ -53,24 +53,6 @@ const Resources = () => {
                 <meta name="keywords" content="mental health resources, EMDR therapy books, mental wellness podcasts, therapy videos, mental health articles, BigBrain Therapy" />
                 <link rel="canonical" href="https://bigbraintherapy.com/resources" />
 
-                {/* Structured Data for Organization */}
-                <script type="application/ld+json">
-                    {`
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "Organization",
-                      "url": "https://bigbraintherapy.com",
-                      "logo": "https://bigbraintherapy.com/logo192.png",
-                      "name": "BigBrain Therapy",
-                      "contactPoint": {
-                        "@type": "ContactPoint",
-                        "telephone": "+1-301-337-5676",
-                        "contactType": "Customer Service"
-                      }
-                    }
-                    `}
-                </script>
-
                 {/* Structured Data for Breadcrumbs specific to Resources */}
                 <script type="application/ld+json">
                     {`

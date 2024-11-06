@@ -18,25 +18,31 @@ const Home = () => {
                 <meta name="description" content="Welcome to BigBrain Therapy, your resource for EMDR and mental health services." />
                 <link rel="canonical" href="https://bigbraintherapy.com" />
 
-                {/* Structured Data for Organization */}
+                {/* Enhanced Structured Data for Organization */}
                 <script type="application/ld+json">
                     {`
                         {
                         "@context": "https://schema.org",
                         "@type": "Organization",
                         "url": "https://bigbraintherapy.com",
+                        "sameAs": [
+                            "https://www.bigbraintherapy.com"
+                        ],
                         "logo": "https://bigbraintherapy.com/logo192.png",
                         "name": "BigBrain Therapy",
+                        "description": "Professional EMDR therapy and mental health services in Maryland.",
                         "contactPoint": {
                             "@type": "ContactPoint",
                             "telephone": "+1-301-337-5676",
-                            "contactType": "Customer Service"
+                            "contactType": "Customer Service",
+                            "areaServed": ["Maryland", "Virginia", "Arizona", "Nebraska"],
+                            "availableLanguage": "English"
                         }
                         }
                     `}
                 </script>
 
-                {/* Structured Data for Breadcrumbs specific to Home */}
+                {/* Keep Breadcrumbs as is */}
                 <script type="application/ld+json">
                     {`
                         {
@@ -51,7 +57,7 @@ const Home = () => {
                         }
                     `}
                 </script>
-            </Helmet>   
+            </Helmet>
             <section className="w-full h-screen">
                 <Hero />
                 <PageContainer className="bg-gradient-to-b from-transparent to-cream dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-black">
