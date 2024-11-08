@@ -14,11 +14,12 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Big Brain Therapy</title>
-                <meta name="description" content="Welcome to BigBrain Therapy, your resource for EMDR and mental health services." />
-                <link rel="canonical" href="https://bigbraintherapy.com" />
+                <title>EMDR Therapy & Mental Health Services | BigBrain Therapy</title>
+                <meta name="description" content="Expert EMDR therapy and mental health services in Maryland, Virginia, Arizona & Nebraska. Professional trauma therapy and counseling. Schedule your free consultation today." />
+                <link rel="canonical" href="https://bigbraintherapy.com/" />
+                <meta name="keywords" content="EMDR therapy, mental health services, trauma therapy, online counseling, BigBrain Therapy" />
 
-                {/* Enhanced Structured Data for Organization  - ONLY IN HOME.JSX*/}
+                {/* Enhanced S<tructured Data for Organization  - ONLY IN HOME.JSX*/}
                 <script type="application/ld+json">
                     {`
                         {
