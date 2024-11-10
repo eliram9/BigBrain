@@ -19,7 +19,7 @@ function App() {
     return (
         <div className='flex flex-col'>
             <Helmet>
-                <title>Big Brain Therapy</title>
+                <title>BigBrain Therapy</title>
                 <meta name="description" content="EMDR and mental health services" />
                 <link rel="canonical" href="https://bigbraintherapy.com" />
             </Helmet>
