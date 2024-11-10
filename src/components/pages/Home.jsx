@@ -19,31 +19,34 @@ const Home = () => {
                 <link rel="canonical" href="https://bigbraintherapy.com/" />
                 <meta name="keywords" content="EMDR therapy, mental health services, trauma therapy, online counseling, BigBrain Therapy" />
 
-                {/* Enhanced S<tructured Data for Organization  - ONLY IN HOME.JSX*/}
+                {/* Enhanced Organization Schema */}
                 <script type="application/ld+json">
                     {`
                         {
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "url": "https://bigbraintherapy.com",
-                        "sameAs": [
-                            "https://www.bigbraintherapy.com"
-                        ],
-                        "logo": "https://bigbraintherapy.com/logo192.png",
-                        "name": "BigBrain Therapy",
-                        "description": "Professional EMDR therapy and mental health services in Maryland.",
-                        "contactPoint": {
-                            "@type": "ContactPoint",
-                            "telephone": "+1-301-337-5676",
-                            "contactType": "Customer Service",
-                            "areaServed": ["Maryland", "Virginia", "Arizona", "Nebraska"],
-                            "availableLanguage": "English"
-                        }
+                            "@context": "https://schema.org",
+                            "@type": "MedicalOrganization",
+                            "@id": "https://bigbraintherapy.com/#organization",
+                            "url": "https://bigbraintherapy.com/",
+                            "sameAs": [
+                                "https://www.bigbraintherapy.com/"
+                            ],
+                            "logo": "https://bigbraintherapy.com/logo192.png",
+                            "image": "https://bigbraintherapy.com/logo192.png",
+                            "name": "BigBrain Therapy",
+                            "alternateName": "BigBrain EMDR Therapy",
+                            "description": "Professional EMDR therapy and mental health services in Maryland, Virginia, Arizona & Nebraska.",
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+1-301-337-5676",
+                                "contactType": "Customer Service",
+                                "areaServed": ["Maryland", "Virginia", "Arizona", "Nebraska"],
+                                "availableLanguage": "English"
+                            }
                         }
                     `}
                 </script>
 
-                {/* Keep Breadcrumbs as is */}
+                {/* Keep your current Breadcrumbs schema - it's working fine */}
                 <script type="application/ld+json">
                     {`
                         {
