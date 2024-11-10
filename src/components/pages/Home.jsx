@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>EMDR Therapy & Mental Health Services | BigBrain Therapy</title>
+                <title>BigBrain Therapy</title>
                 <meta name="description" content="Expert EMDR therapy and mental health services in Maryland, Virginia, Arizona & Nebraska. Professional trauma therapy and counseling. Schedule your free consultation today." />
                 <link rel="canonical" href="https://bigbraintherapy.com/" />
                 <meta name="keywords" content="EMDR therapy, mental health services, trauma therapy, online counseling, BigBrain Therapy" />
