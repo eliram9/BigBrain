@@ -14,7 +14,7 @@ const Contact = () => {
     return (
         <>
             <Helmet>
-                <title>Contact Us | BigBrain Therapy</title>
+                <title>BigBrain Therapy | Contact Us</title>
                 <meta name="description" content="Get in touch with BigBrain Therapy for EMDR therapy services. Contact us today to book your consultation." />
                 <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy contact, schedule consultation" />
                 <link rel="canonical" href="https://bigbraintherapy.com/contact-us" />

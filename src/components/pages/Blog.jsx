@@ -59,7 +59,7 @@ const Blog = () => {
     return (
         <>
             <Helmet>
-                <title>Blog | BigBrain Therapy</title>
+                <title>BigBrain Therapy | Blog</title>
                 <meta name="description" content="Explore the BigBrain Therapy blog for insights, tips, and articles on EMDR therapy and mental wellness." />
                 <meta name="keywords" content="EMDR therapy blog, mental health articles, BigBrain Therapy blog" />
                 <link rel="canonical" href="https://bigbraintherapy.com/blog" />

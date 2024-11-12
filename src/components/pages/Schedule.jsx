@@ -44,7 +44,7 @@ const Schedule = () => {
     return (
         <>
             <Helmet>
-                <title>Schedule | BigBrain Therapy</title>
+                <title>BigBrain Therapy | Schedule</title>
                 <meta name="description" content="Book your EMDR therapy or mental health consultation with BigBrain Therapy in Potomac, MD. Easy online scheduling for new and existing patients." />
                 <meta name="keywords" content="schedule therapy, book appointment, EMDR therapy, mental health consultation, BigBrain Therapy, Potomac MD" />
                 <link rel="canonical" href="https://bigbraintherapy.com/schedule" />

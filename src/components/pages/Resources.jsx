@@ -48,7 +48,7 @@ const Resources = () => {
     return (
         <>
             <Helmet>
-                <title>Resources | BigBrain Therapy</title>
+                <title>BigBrain Therapy | Resources</title>
                 <meta name="description" content="Access a curated collection of mental health resources from BigBrain Therapy. Explore recommended books, podcasts, videos, and articles on EMDR therapy and mental wellness." />
                 <meta name="keywords" content="mental health resources, EMDR therapy books, mental wellness podcasts, therapy videos, mental health articles, BigBrain Therapy" />
                 <link rel="canonical" href="https://bigbraintherapy.com/resources" />
