@@ -20,7 +20,7 @@ const EMDR = () => {
     return (
         <>
             <Helmet>
-                <title>EMDR | BigBrain Therapy</title>
+                <title>BigBrain Therapy | EMDR</title>
                 <meta name="description" content="Learn about EMDR therapy and how it helps reprocess traumatic memories to improve mental health." />
                 <link rel="canonical" href="https://bigbraintherapy.com/emdr" />
 

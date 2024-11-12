@@ -89,7 +89,7 @@ const ArticleDetail = () => {
     return (
         <>
             <Helmet>
-                <title>{`${article.title} | BigBrain Therapy Blog`}</title>
+                <title>{`BigBrain Therapy | Blog - ${article.title}`}</title>
                 <meta name="description" content={article.summary} />
                 <meta name="keywords" content={`${article.category}, EMDR therapy, mental health, BigBrain Therapy, ${article.author}`} />
                 <link rel="canonical" href={`https://bigbraintherapy.com/blog/article/${id}`} />
