@@ -42,9 +42,29 @@ function App() {
                         }
                     `}
                 </script>
+
+                {/* New Organization schema */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "BigBrain Therapy",
+                            "url": "https://bigbraintherapy.com/",
+                            "logo": "https://bigbraintherapy.com/logo.png",
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+1-555-555-5555",
+                                "contactType": "Customer Service",
+                                "areaServed": "US",
+                                "availableLanguage": "English"
+                            }
+                        }
+                    `}
+                </script>
             </Helmet>
             <Navbar />
-            <Suspense fallback={<div></div>}>
+            <Suspense fallback={null}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
