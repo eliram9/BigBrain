@@ -27,9 +27,6 @@ const Home = () => {
                             "@type": "MedicalOrganization",
                             "@id": "https://bigbraintherapy.com/#organization",
                             "url": "https://bigbraintherapy.com/",
-                            "sameAs": [
-                                "https://www.bigbraintherapy.com/"
-                            ],
                             "logo": "https://bigbraintherapy.com/logo192.png",
                             "image": "https://bigbraintherapy.com/logo192.png",
                             "name": "BigBrain Therapy",
@@ -62,7 +59,7 @@ const Home = () => {
                     `}
                 </script>
             </Helmet>
-            <section className="w-full h-screen">
+            <section aria-label="Hero Section" className="w-full h-screen">
                 <Hero />
                 <PageContainer className="bg-gradient-to-b from-transparent to-cream dark:bg-gradient-to-b dark:from-black dark:via-black dark:to-black">
                     <ServicesSection />
