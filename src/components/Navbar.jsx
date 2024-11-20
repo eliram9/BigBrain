@@ -105,20 +105,23 @@ const Navbar = () => {
                                     <MobileCustomLink href="/" 
                                                       title="Home Page" 
                                                       className="text-white dark:text-black dark:font-normal text-md font-extralight block w-3/5" 
+                                                      aria-label="Go to BigBrain Therapy Homepage"
                                                       onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/about" 
                                                       title="About" 
-                                                      className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5"
+                                                      aria-label="Learn more about Arianne" 
                                                       onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/emdr" 
                                                       title="EMDR" 
-                                                      className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5"
+                                                      aria-label="Learn about EMDR Therapy" 
                                                       onClick={handleClick} 
                                     />
                                 </div>
@@ -126,6 +129,7 @@ const Navbar = () => {
                                     <MobileCustomLink href="/resources" 
                                                       title="Resources" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      aria-label="Access resources at BigBrain Therapy"
                                                       onClick={handleClick} 
                                     />
                                 </div>
@@ -133,13 +137,15 @@ const Navbar = () => {
                                     <MobileCustomLink href="/blog" 
                                                       title="Blog" 
                                                       className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      aria-label="Read the BigBrain Therapy Blog"
                                                       onClick={handleClick} 
                                     />
                                 </div>
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/contact-us" 
                                                       title="Contact" 
-                                                      className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5" 
+                                                      className="text-white dark:text-[#4E4C46] dark:font-normal text-md font-extralight block w-3/5"
+                                                      aria-label="Contact BigBrain Therapy" 
                                                       onClick={handleClick} 
                                     />
                                 </div>
@@ -173,11 +179,11 @@ const Navbar = () => {
                             </span>
                         </Link>    
                         <div className="ml-4 md:ml-1 mt-1 items-center">
-                            <CustomLink href="/about" title="About" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
-                            <CustomLink href="/emdr" title="EMDR" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
-                            <CustomLink href="/resources" title="Resources" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
-                            <CustomLink href="/blog" title="Blog" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
-                            <CustomLink href="/contact-us" title="Contact" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
+                            <CustomLink href="/about" title="About" aria-label="Learn more about Arianne" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
+                            <CustomLink href="/emdr" title="EMDR" aria-label="Learn about EMDR Therapy" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
+                            <CustomLink href="/resources" title="Resources" aria-label="Access resources at BigBrain Therapy" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
+                            <CustomLink href="/blog" title="Blog" aria-label="Read the BigBrain Therapy Blog" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
+                            <CustomLink href="/contact-us" title="Contact" aria-label="Contact BigBrain Therapy" className="ml-10 text-main text-sm md:text-xs dark:font-light" />
                         </div>
                     </div>
                 </nav>
