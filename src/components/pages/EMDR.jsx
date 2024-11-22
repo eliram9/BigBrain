@@ -20,11 +20,11 @@ const EMDR = () => {
     return (
         <>
             <Helmet>
-                <title>BigBrain Therapy | EMDR</title>
-                <meta name="description" content="Learn about EMDR therapy and how it helps reprocess traumatic memories to improve mental health." />
+                <title>BigBrain Therapy | EMDR Therapy Explained</title>
+                <meta name="description" content="Discover how EMDR therapy helps reprocess traumatic memories and improves mental health. Learn more about its benefits." />
                 <link rel="canonical" href="https://bigbraintherapy.com/emdr" />
 
-                {/* Structured Data for Breadcrumbs specific to EMDR */}
+                {/* Breadcrumbs Schema */}
                 <script type="application/ld+json">
                     {`
                     {
@@ -38,13 +38,56 @@ const EMDR = () => {
                       },{
                         "@type": "ListItem",
                         "position": 2,
-                        "name": "EMDR",
+                        "name": "EMDR Therapy",
                         "item": "https://bigbraintherapy.com/emdr"
                       }]
                     }
                     `}
                 </script>
+
+                {/* FAQ Schema */}
+                <script type="application/ld+json">
+                    {`
+                    {
+                      "@context": "https://schema.org",
+                      "@type": "FAQPage",
+                      "mainEntity": [
+                        {
+                          "@type": "Question",
+                          "name": "What is EMDR therapy?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "EMDR is a psychotherapy method that helps reprocess traumatic memories and reduce psychological distress."
+                          }
+                        },
+                        {
+                          "@type": "Question",
+                          "name": "Who can benefit from EMDR therapy?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "EMDR therapy is effective for individuals with anxiety, PTSD, depression, and low self-esteem."
+                          }
+                        },
+                        {
+                          "@type": "Question",
+                          "name": "Is EMDR therapy offered online?",
+                          "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, EMDR therapy is provided via secure telehealth sessions, ensuring convenience and privacy."
+                          }
+                        }
+                      ]
+                    }
+                    `}
+                </script>
+
+                {/* Open Graph Tags */}
+                <meta property="og:title" content="BigBrain Therapy | EMDR Therapy" />
+                <meta property="og:description" content="Discover how EMDR therapy helps reprocess traumatic memories and improves mental health. Learn more about its benefits." />
+                <meta property="og:url" content="https://bigbraintherapy.com/emdr" />
+                <meta property="og:type" content="website" />
             </Helmet>
+
 
             <section className='relative w-full h-auto overflow-hidden'>
                 <HeroGrayBackground className="absolute inset-0 w-full h-full" />
@@ -55,7 +98,7 @@ const EMDR = () => {
                         {/* Image Container */}
                         <div className='w-5/12 flex justify-start sm:h-1/2
                                         md:w-10/12 md:pb-5'>
-                            <Factory className='h-auto' />
+                            <Factory className='h-auto' alt="Brain filing system visualization" />
                         </div>
                         
                         {/* Text Container */}
@@ -108,12 +151,12 @@ const EMDR = () => {
                                     now concludes that repeated exposure to little <CircledLetter letter="t" /> traumas can cause more emotional harm than exposure to a single big <CircledLetter letter="T" /> traumatic event.
                                     Little <CircledLetter letter="t" /> traumas are everyday disturbances, such as becoming upset, anxious, or feeling down.
                                     </p>
-                                    <p>Invalidating the impact of these little <CircledLetter letter="t" /> trauamas can create adverse
+                                    <p>Invalidating the impact of these little <CircledLetter letter="t" /> traumas can create adverse
                                     coping behaviors, such as bottling up emotions, feeling anxiety, or attempting to manage symptoms without support and feeling isolated.
                                     If you have had any little <CircledLetter letter="t" /> or big <CircledLetter letter="T" /> trauma, EMDR could be a great fit for you.
                                     </p>
                                     <br />
-                                    <p>EMDR can decrease the feelings of depression, anxiety, low self esteem
+                                    <p>EMDR can decrease the feelings of depression, anxiety, low self esteem,
                                     emotional dysregulation, symptoms of OCD, PTSD, and ADHD. Not only can EMDR improve your quality of life, it can also be absorbed faster, stay longer, and be more impactful
                                     than traditional talk therapy. Together we can evaluate if EMDR is a good fit to alleviate the symptoms that cause distress in your life. 
                                     </p>
@@ -124,7 +167,7 @@ const EMDR = () => {
                         {/* Image Container */}
                         <div className='w-4/12 flex justify-center
                                         md:justify-center sm:w-10/12 md:w-8/12 sm:py-5 md:pb-5'>
-                            <GirlsPuzzle className='h-auto' />
+                            <GirlsPuzzle className='h-auto' alt="EMDR therapy process illustration" />
                         </div>
                     </div>
                 </PageContainer>
