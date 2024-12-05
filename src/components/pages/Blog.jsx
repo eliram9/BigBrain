@@ -9,6 +9,7 @@ import SectionSubtitle from '../ui-elements/SectionSubtitle';
 import { formatDate } from '../../apollo/formatDate';
 import { GET_ALL_ARTICLES } from '../quries/fetchAllArticles';
 import FooterNew from '../FooterNew';
+import { LikeIcon } from '../../media/icons';
 
 
 // Article component for every article on the list.

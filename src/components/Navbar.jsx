@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Logo, LightModeIcon, DarkModeIcon } from '../media/icons'
+import { Logo, LightModeIcon, DarkModeIcon, InstagramLogo } from '../media/icons'
 import useThemeSwitcher from './hooks/useThemeSwitcher';
 
 const CustomLink = ({ href, title, className = "" }) => {
@@ -190,6 +190,14 @@ const Navbar = () => {
                 <nav>
                     <div className="flex items-center text-main dark:text-white ">
                         <p className='font-normal text-sm md:text-xs mt-1'>(301) 337-5676</p>
+                        <Link to="https://www.instagram.com/bigbrain_therapy/profilecard/?igsh=MXRvb2kwNjh3Z3JsMg==" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              aria-label="Visit our Instagram page"
+                              className='w-8 ml-1'
+                        >
+                            <InstagramLogo />
+                        </Link>
                         <button onClick={toggleTheme} className='w-8 md:w-6 ml-4 flex items-center justify-center rounded-full p-[3px]'>
                             { theme === 'dark' ? <DarkModeIcon /> : <LightModeIcon /> }     
                         </button>

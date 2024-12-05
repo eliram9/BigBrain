@@ -10,6 +10,7 @@ import { formatFullDate } from '../../apollo/formatDate';
 import { sanitizeAndPrepareHtml } from '../../apollo/htmlHandler';
 import ScrollProgressBar from '../ui-elements/ScrollProgressBar';
 import useCalculateWords from '../hooks/useCalculateWords';
+// import { LikeIcon } from '../../media/icons';
 import ContactFooter from '../ContactFooter';
 
 const ArticleParagraph = ({ paragraph }) => {
@@ -194,14 +195,27 @@ const ArticleDetail = () => {
                             {article.summary}
                         </p>
                     </div>
-                    <div className='py-4 text-slate-500 text-sm dark:text-lightBanana'>
-                        <p className='font-medium'>By: {article.author}</p>
-                        <p className='xs:text-xs'>EMDR Therapist, LCSW-C</p>
+                    <div className='flex justify-between items-center'>
+                        <div className='py-4 text-slate-500 text-sm dark:text-lightBanana'>
+                            <p className='font-medium'>By: {article.author}</p>
+                            <p className='xs:text-xs'>EMDR Therapist, LCSW-C</p>
+                        </div>
+
+                        
+                        {/* <div className='flex justify-between items-center text-main dark:text-white'>
+                            <p className='mr-1 font-light text-md'>13</p>
+                            <button className="border border-main p-1 rounded-full flex items-center justify-center"
+                                    onClick={() => alert("works")}
+                                    aria-label="Like"
+                            >
+                                <LikeIcon />
+                            </button>
+                        </div> */}
                     </div>
 
                     <hr />
 
-                    <div className='h-full mt-10 leading-loose mb-40'>
+                    <div className='h-full mt-10 leading-loose mb-32 '>
                         {article.texts?.map((text, index) => {
                             return (
                                 <ArticleParagraph key={text.id || index} paragraph={text.paragraph || text} />
@@ -211,13 +225,13 @@ const ArticleDetail = () => {
                     
                     <hr />
                     {article.sources && article.sources.length > 0 && (
-                        <div className="bg-babyBlue px-5 py-5 mt-10 rounded-lg mb-20 xs:mb-0">
+                        <div className="bg-babyBlue px-5 py-5 mt-10 rounded-lg mb-20 md:mb-0">
                             <h2 className="text-darkGray text-xl font-semibold mb-4 md:text-sm">Sources</h2>
                             <ol className="list-decimal list-inside space-y-2">
                                 {article.sources.map((source) => (
                                     <ArticleSource key={source.id}
-                                                sourceName={source.sourceName}
-                                                url={source.url}
+                                                   sourceName={source.sourceName}
+                                                   url={source.url}
                                     />
                                 ))}
                             </ol>
