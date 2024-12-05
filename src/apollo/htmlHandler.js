@@ -26,6 +26,9 @@ export const sanitizeAndPrepareHtml = (html) => {
         link.style.color = '#124C5F'; // Main color
     });
 
+    // Process <li> elements and apply styles
+
+
     // Define regex patterns for media
     const patterns = {
         youtube: /(?:https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+/,

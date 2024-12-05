@@ -79,3 +79,7 @@ strong {
 .light {
   --underline-color: var(--underline-color-light);
 }
+
+li::marker {
+  color: #4E4C46!important;
+}
