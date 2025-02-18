@@ -15,9 +15,13 @@ const Home = () => {
         <>
             <Helmet>
                 <title>BigBrain Therapy</title>
-                <meta name="description" content="Expert EMDR therapy and mental health services in Maryland, Virginia, Arizona & Nebraska. Professional trauma therapy and counseling. Schedule your free consultation today." />
+                <meta name="description"
+                      content="Expert EMDR therapy and mental health services in Maryland, Virginia, Arizona & Nebraska. Professional trauma therapy and counseling. Schedule your free consultation today."
+                />
                 <link rel="canonical" href="https://bigbraintherapy.com/" />
-                <meta name="keywords" content="EMDR therapy, mental health services, trauma therapy, online counseling, BigBrain Therapy" />
+                <meta name="keywords"
+                      content="EMDR therapy, mental health services, trauma therapy, online counseling, BigBrain Therapy"
+                />
 
                 {/* Enhanced Organization Schema */}
                 <script type="application/ld+json">
@@ -43,18 +47,36 @@ const Home = () => {
                     `}
                 </script>
 
-                {/* Keep your current Breadcrumbs schema - it's working fine */}
+                {/* Breadcrumbs Schema */}
                 <script type="application/ld+json">
                     {`
                         {
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [{
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [{
                             "@type": "ListItem",
                             "position": 1,
                             "name": "Home",
                             "item": "https://bigbraintherapy.com/"
-                        }]
+                            }]
+                        }
+                    `}
+                </script>
+
+                {/* Add WebSite Schema with Sitelinks Search Box */}
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "@id": "https://bigbraintherapy.com/#website",
+                            "url": "https://bigbraintherapy.com/",
+                            "name": "BigBrain Therapy",
+                            "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://bigbraintherapy.com/?s={search_term_string}",
+                            "query-input": "required name=search_term_string"
+                            }
                         }
                     `}
                 </script>
