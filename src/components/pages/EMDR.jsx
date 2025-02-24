@@ -20,74 +20,74 @@ const EMDR = () => {
     return (
         <>
             <Helmet>
-                <title>BigBrain Therapy | EMDR Therapy Explained</title>
-                <meta name="description" content="Discover how EMDR therapy helps reprocess traumatic memories and improves mental health. Learn more about its benefits." />
+                <title>BigBrain Therapy | EMDR Therapy Explained</title>  {/* Keeping this as is */}
+                <meta name="description" content="Learn about EMDR therapy at BigBrain Therapy for trauma, ADHD, anxiety, depression, stress, relationships, and more. Schedule a consultation in Maryland, Virginia, Arizona & Nebraska." />
+                <meta name="keywords" content="EMDR therapy, mental health services, trauma therapy, ADHD therapy, anxiety counseling, depression support, stress management, relationship issues, self-esteem, life transitions, BigBrain Therapy" />
                 <link rel="canonical" href="https://bigbraintherapy.com/emdr" />
 
                 {/* Breadcrumbs Schema */}
                 <script type="application/ld+json">
                     {`
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "BreadcrumbList",
-                      "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://bigbraintherapy.com/"
-                      },{
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "EMDR Therapy",
-                        "item": "https://bigbraintherapy.com/emdr"
-                      }]
-                    }
+                        {
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://bigbraintherapy.com/"
+                        },{
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "EMDR Therapy",
+                            "item": "https://bigbraintherapy.com/emdr"
+                        }]
+                        }
                     `}
                 </script>
 
                 {/* FAQ Schema */}
                 <script type="application/ld+json">
                     {`
-                    {
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      "mainEntity": [
                         {
-                          "@type": "Question",
-                          "name": "What is EMDR therapy?",
-                          "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "EMDR is a psychotherapy method that helps reprocess traumatic memories and reduce psychological distress."
-                          }
-                        },
-                        {
-                          "@type": "Question",
-                          "name": "Who can benefit from EMDR therapy?",
-                          "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "EMDR therapy is effective for individuals with anxiety, PTSD, depression, and low self-esteem."
-                          }
-                        },
-                        {
-                          "@type": "Question",
-                          "name": "Is EMDR therapy offered online?",
-                          "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes, EMDR therapy is provided via secure telehealth sessions, ensuring convenience and privacy."
-                          }
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                            "@type": "Question",
+                            "name": "What is EMDR therapy?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "EMDR is a psychotherapy method that helps reprocess traumatic memories and reduce psychological distress, benefiting those with trauma, anxiety, depression, and more."
+                            }
+                            },
+                            {
+                            "@type": "Question",
+                            "name": "Who can benefit from EMDR therapy?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "EMDR therapy is effective for individuals with anxiety, PTSD, depression, ADHD, stress, relationship issues, low self-esteem, and life transition challenges."
+                            }
+                            },
+                            {
+                            "@type": "Question",
+                            "name": "Is EMDR therapy offered online?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes, EMDR therapy is provided via secure telehealth sessions, ensuring convenience and privacy for clients in Maryland, Virginia, Arizona, and Nebraska."
+                            }
+                            }
+                        ]
                         }
-                      ]
-                    }
                     `}
                 </script>
 
                 {/* Open Graph Tags */}
                 <meta property="og:title" content="BigBrain Therapy | EMDR Therapy" />
-                <meta property="og:description" content="Discover how EMDR therapy helps reprocess traumatic memories and improves mental health. Learn more about its benefits." />
+                <meta property="og:description" content="Learn about EMDR therapy at BigBrain Therapy for trauma, ADHD, anxiety, depression, stress, relationships, and more. Schedule a consultation in Maryland, Virginia, Arizona & Nebraska." />
                 <meta property="og:url" content="https://bigbraintherapy.com/emdr" />
                 <meta property="og:type" content="website" />
             </Helmet>
-
 
             <section className='relative w-full h-auto overflow-hidden'>
                 <HeroGrayBackground className="absolute inset-0 w-full h-full" />

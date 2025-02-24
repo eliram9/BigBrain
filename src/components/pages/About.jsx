@@ -17,30 +17,31 @@ const About = () => {
         <>
             <Helmet>
                 <title>BigBrain Therapy | About</title>
-                <meta name="description" content="Meet Arianne, a licensed certified social worker offering EMDR and psychotherapy in Potomac, MD. Learn about her approach to mental health and what to expect in therapy." />
+                <meta name="description" content="Learn about Arianne, a licensed certified social worker at BigBrain Therapy, offering EMDR, trauma counseling, ADHD support, anxiety, depression, stress management, relationships, and more in Potomac, MD, Maryland, Virginia, Arizona & Nebraska." />
                 <link rel="canonical" href="https://bigbraintherapy.com/about" />
-
+                <meta name="keywords" content="about BigBrain Therapy, Arianne, EMDR therapist, mental health therapist, trauma therapy, ADHD therapy, anxiety counseling, depression support, stress management, relationship issues, self-esteem, life transitions, Potomac MD" />
                 {/* Structured Data for Breadcrumbs specific to About */}
                 <script type="application/ld+json">
                     {`
                     {
-                      "@context": "https://schema.org",
-                      "@type": "BreadcrumbList",
-                      "itemListElement": [{
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
                         "item": "https://bigbraintherapy.com/"
-                      },{
+                    },{
                         "@type": "ListItem",
                         "position": 2,
                         "name": "About",
                         "item": "https://bigbraintherapy.com/about"
-                      }]
+                    }]
                     }
                     `}
                 </script>
             </Helmet>
+            
             <section className=''>
                 <PageContainer className='dark:bg-black '>
                     <div className='flex sm:flex-col-reverse md:flex-row items-center justify-between'>

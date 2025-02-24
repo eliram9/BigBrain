@@ -15,8 +15,8 @@ const Contact = () => {
         <>
             <Helmet>
                 <title>BigBrain Therapy | Contact Us</title>
-                <meta name="description" content="Get in touch with BigBrain Therapy for EMDR therapy services. Contact us today to book your consultation." />
-                <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy contact, schedule consultation" />
+                <meta name="description" content="Contact BigBrain Therapy for EMDR therapy, trauma counseling, ADHD support, anxiety, depression, stress management, relationships, and more. Schedule a consultation in Maryland, Virginia, Arizona & Nebraska." />
+                <meta name="keywords" content="contact BigBrain Therapy, EMDR therapy contact, schedule consultation, mental health contact, ADHD support contact, anxiety counseling contact, depression support, stress management, relationship issues, self-esteem, life transitions" />
                 <link rel="canonical" href="https://bigbraintherapy.com/contact-us" />
                 
                 {/* Structured Data for Breadcrumbs */}

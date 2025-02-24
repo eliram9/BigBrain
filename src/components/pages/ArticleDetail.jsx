@@ -90,12 +90,12 @@ const ArticleDetail = () => {
     return (
         <>
             <Helmet>
-                <title>{`BigBrain Therapy | Blog - ${article.title}`}</title>
-                <meta name="description" content={article.summary} />
-                <meta name="keywords" content={`${article.category}, EMDR therapy, mental health, BigBrain Therapy, ${article.author}`} />
+                <title>{`BigBrain Therapy | Blog - ${article.title}`}</title>  {/* Updated for conciseness */}
+                <meta name="description" content={`${article.summary || 'Read this article on the BigBrain Therapy blog for insights on mental health, including EMDR therapy, trauma, ADHD, anxiety, depression, stress management, relationships, self-esteem, and life transitions in Maryland, Virginia, Arizona & Nebraska.'}`} />
+                <meta name="keywords" content={`${article.category}, EMDR therapy, mental health, BigBrain Therapy, ${article.author}, trauma therapy, ADHD resources, anxiety counseling, depression support, stress management, relationship issues, self-esteem, life transitions`} />  {/* Fixed duplication, kept expanded list */}
                 <link rel="canonical" href={`https://bigbraintherapy.com/blog/article/${id}`} />
                 <meta property="og:title" content={article.title} />
-                <meta property="og:description" content={article.summary} />
+                <meta property="og:description" content={`${article.summary || 'Read this article on the BigBrain Therapy blog for insights on mental health, including EMDR therapy, trauma, ADHD, anxiety, depression, stress management, relationships, self-esteem, and life transitions in Maryland, Virginia, Arizona & Nebraska.'}`} />
                 <meta property="og:image" content={article.openingImageUrl} />
                 <meta property="og:url" content={`https://bigbraintherapy.com/blog/article/${id}`} />
                 <meta property="og:type" content="article" />
