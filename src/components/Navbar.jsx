@@ -103,7 +103,7 @@ const Navbar = () => {
                             <div className="text-center mb-12">
                                 <div className="w-full flex justify-center mb-4">
                                     <MobileCustomLink href="/" 
-                                                      title="Home Page" 
+                                                      title="Home" 
                                                       className="text-white dark:text-black dark:font-normal text-md font-extralight block w-3/5" 
                                                       aria-label="Go to BigBrain Therapy Homepage"
                                                       onClick={handleClick} 

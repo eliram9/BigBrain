@@ -20,48 +20,9 @@ function App() {
         <div className='flex flex-col'>
             <Helmet>
                 <meta name="robots" content="index, follow" />
-                <title>BigBrain Therapy | EMDR Therapy & Mental Health Services</title>
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="theme-color" content="#124C5F" />
-                <meta name="description" content="Expert EMDR therapy and mental health services. Professional trauma therapy and counseling in Maryland, Virginia, Arizona & Nebraska." />
-                <link rel="canonical" href="https://bigbraintherapy.com/" />
-                
-                {/* Add Website schema - helps with sitelinks */}
-                <script type="application/ld+json">
-                    {`
-                        {
-                            "@context": "https://schema.org",
-                            "@type": "WebSite",
-                            "url": "https://bigbraintherapy.com/",
-                            "potentialAction": {
-                                "@type": "SearchAction",
-                                "target": "https://bigbraintherapy.com/search?q={search_term_string}",
-                                "query-input": "required name=search_term_string"
-                            }
-                        }
-                    `}
-                </script>
-
-                {/* New Organization schema */}
-                <script type="application/ld+json">
-                    {`
-                        {
-                            "@context": "https://schema.org",
-                            "@type": "Organization",
-                            "name": "BigBrain Therapy",
-                            "url": "https://bigbraintherapy.com/",
-                            "logo": "https://bigbraintherapy.com/logo.png",
-                            "contactPoint": {
-                                "@type": "ContactPoint",
-                                "telephone": "+1-555-555-5555",
-                                "contactType": "Customer Service",
-                                "areaServed": "US",
-                                "availableLanguage": "English"
-                            }
-                        }
-                    `}
-                </script>
             </Helmet>
             <Navbar />
             <Suspense fallback={null}>

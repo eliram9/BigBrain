@@ -60,32 +60,32 @@ const Blog = () => {
         <>
             <Helmet>
                 <title>BigBrain Therapy | Blog</title>
-                <meta name="description" content="Explore the BigBrain Therapy blog for insights, tips, and articles on EMDR therapy and mental wellness." />
-                <meta name="keywords" content="EMDR therapy blog, mental health articles, BigBrain Therapy blog" />
+                <meta name="description" content="Explore the BigBrain Therapy blog for insights, tips, and articles on EMDR therapy, trauma, ADHD, anxiety, depression, stress management, relationships, self-esteem, life transitions, and mental wellness in Maryland, Virginia, Arizona & Nebraska." />
+                <meta name="keywords" content="EMDR therapy blog, mental health articles, BigBrain Therapy blog, trauma therapy blog, ADHD resources, anxiety counseling blog, depression support, stress management tips, relationship issues, self-esteem, life transitions" />
                 <link rel="canonical" href="https://bigbraintherapy.com/blog" />
                 
                 {/* Structured Data for Breadcrumbs */}
                 <script type="application/ld+json">
-                {`
-                    {
-                        "@context": "https://schema.org",
-                        "@type": "BreadcrumbList",
-                        "itemListElement": [
-                            {
-                                "@type": "ListItem",
-                                "position": 1,
-                                "name": "Home",
-                                "item": "https://bigbraintherapy.com/"
-                            },
-                            {
-                                "@type": "ListItem",
-                                "position": 2,
-                                "name": "Blog",
-                                "item": "https://bigbraintherapy.com/blog"
-                            }
-                        ]
-                    }
-                `}
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "BreadcrumbList",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Home",
+                                    "item": "https://bigbraintherapy.com/"
+                                },
+                                {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Blog",
+                                    "item": "https://bigbraintherapy.com/blog"
+                                }
+                            ]
+                        }
+                    `}
                 </script>
             </Helmet>
             <section className='relative w-full h-auto overflow-hidden dark:bg-black'>
